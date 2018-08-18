@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+</head>
+<body style="color: black; text-align: justify">
+
+<nav id="nav-wrap" style="display: block;" class="opaque">
+
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul id="nav" class="nav">
+        <li><a href="../index.html#home">Главная</a></li>
+        <li><a href="../index.html#about">Обо мне</a></li>
+        <li><a href="../index.html#resume">Резюме</a></li>
+        <li class="current"><a href="../index.html#portfolio">Портфолио</a></li>
+    </ul> <!-- end #nav -->
+
+</nav> <!-- end #nav-wrap -->
+
+    <section id="portfolio">
+        <div class="row skill">
+            <div style="text-align: center">
+                <h2>Системы агрегации пользовательских данных ЮЛ и ИП.</h2>
+            </div>
+            <p>
+                Принимал участие в разработке систем XFirm, CheckPerson в компании ООО "ПрессИндекс".
+                Моя задача была разработать сервис парсер архивов с XML документами по ЮЛ и ИП.
+                Сервис подключался к RabbitMQ очереди и при поступлении сообщения в теле которого было имя архива, выкачивал его из Hadoop,
+                распаковывал и с помощью авто сгенерированных моделей из XSD начинал лениво маппить запись из XML на модель (JAXB),
+                затем проводил обработку ошибок (отсутствие ИНН и т.д.), сериализовал в JSON и отправлял на хранение в Elesandra (Elasticsearch + Cassandra).
+                Технологический стек: Java/Kotlin, JUnit, Spring Boot, Maven, RabbitMQ, Elasticsearch, Cassandra.
+                На основе этих данных было построено две системы: XFirm, CheckPerson.
+            </p>
+            Основные возможности системы XFirm:
+            <ol>
+                <li>Проверка контрагентов (реальный бизнес или нет, платежеспособность, суды, арбитражи и т.д.)</li>
+                <li>Проверка сведений по своим филиалам и дочкам (не начались ли схемы с какими-то изменениями капитала, смена директоров и т.п.)</li>
+                <li>Анализ активности отдельного субъекта в контексте бизнеса</li>
+            </ol>
+            <div style="text-align: center">
+                <img src="../images/portfolio/xfirm/1.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/xfirm/2.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/xfirm/3.png">
+            </div>
+            Сервис CheckPerson позволяет получить:
+            <ol>
+                <li>Проверку на действительность паспорта (если введёте в форму данные документа)</li>
+                <li>Проверку человека на розыск по базе данных МВД</li>
+                <li>Проверку человека на долги в базе данных Федеральной службы судебных приставов</li>
+                <li>Проверку, числится ли человек в качестве ИП, руководителя, учредителя в компаниях</li>
+            </ol>
+            <div style="text-align: center">
+                <img src="../images/portfolio/xfirm/4.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/xfirm/5.png">
+            </div>
+           </div>
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="skype:alpenov_tanat?chat"><i class="fa fa-skype"></i></a></li>
+                </ul>
+
+                <ul class="copyright">
+                <li>&copy; Copyright 2018</li>
+                </ul>
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#portfolio"><i class="icon-up-open"></i></a></div>
+
+        </div>
+
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init-portfolio.js"></script>
+
+</body>
+</html>

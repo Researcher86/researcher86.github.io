@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+</head>
+<body style="color: black; text-align: justify">
+
+<nav id="nav-wrap" style="display: block;" class="opaque">
+
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul id="nav" class="nav">
+        <li><a href="../index.html#home">Главная</a></li>
+        <li><a href="../index.html#about">Обо мне</a></li>
+        <li><a href="../index.html#resume">Резюме</a></li>
+        <li class="current"><a href="../index.html#portfolio">Портфолио</a></li>
+    </ul> <!-- end #nav -->
+
+</nav> <!-- end #nav-wrap -->
+
+    <section id="portfolio">
+        <div class="row skill">
+            <div style="text-align: center">
+                <h2>Сервис для обмена сообщениями</h2>
+            </div>
+            <p>
+                Разработал сервис для обмена сообщениями. Используемые технологии: Java, Spring (MVC, Security, Data (JPA/Hibernate)),
+                JSP, Maven, SLF4J (Logback), Twitter Bootstrap, JQuery, Tomcat, PostgreSQL, HSQLDB.
+            </p>
+            <h2>Задание</h2>
+            Необходимо реализовать сервис сообщений.
+            <br>
+            Структура:
+            <ul class="disc">
+                <li>Страница авторизации</li>
+                <li>Страница регистрации</li>
+                <li>Основная страница</li>
+                <li>Страница администратора</li>
+            </ul>
+            Страница регистрации:
+            <ul class="disc">
+                <li>Поля для ввода: ФИО, email, логин, пароль (в случае, если пользователь уже существует, выводится сообщение об ошибке)</li>
+                <li>Ссылка для перехода на главную страницу</li>
+            </ul>
+            Страница авторизации:
+            <ul class="disc">
+                <li>Поля для ввода: логина и пароля (в случае, если пользователь не найден, выводится сообщение об ошибке)</li>
+                <li>Ссылка на страницу регистрации</li>
+                <li>Кнопка вход</li>
+            </ul>
+            Основная страница (простой пользователь):
+            <ul class="disc">
+                <li>Список сообщений в табличной форме (От кого, дата время, тема)</li>
+                <li>Для администратора добавляется поле (кому)</li>
+                <li>Возможность сортировки сообщений по полям таблицы</li>
+                <li>Возможность удалить сообщение</li>
+                <li>При клике по сообщению открывать всплывающий диалог в том же окне с заголовками (Отправитель, Дата, Тема) и текстом сообщения</li>
+                <li>Адресная книга (редактируемый [добавить/удалить] список имен пользователей) с ссылкой (кнопкой) для отправки сообщения</li>
+                <li>Ссылка и всплывающий диалог для смены пароля</li>
+                <li>Для администратора добавляется ссылка ¬ управление пользователями</li>
+                <li>Ссылка для выхода</li>
+            </ul>
+            Страница администратора (управление пользователями):
+            <ul class="disc">
+                <li>Список зарегистрированных пользователей (ФИО, email, login, role)</li>
+                <li>Возможность добавить / удалить пользователя</li>
+                <li>Возможность назначить / удалить права администратора</li>
+                <li>Ссылка на главную страницу</li>
+                <li>Предусмотреть, чтобы переход по ссылке на страницу администрирования был запрещен для обычных пользователей</li>
+            </ul>
+            Общие требования:
+            <ul class="disc">
+                <li>Использование JSP, Servlet, Spring MVC</li>
+                <li>Кроссбраузерность IE 10,11, Firefox, Chrome, Opera</li>
+                <li>Все данные хранятся в БД (предпочтительно PostgreSQL)</li>
+                <li>Работа с базой через Hibernate</li>
+                <li>Наличие текстового логгирования</li>
+                <li>Работа всплывающих диалогов через AJAX</li>
+                <li>Разделение ролей через Spring Security</li>
+            </ul>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/1.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/2.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/3.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/4.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/5.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/6.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/7.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/8.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/9.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/10.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/11.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/12.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/messager/13.png">
+            </div>
+           </div>
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="skype:alpenov_tanat?chat"><i class="fa fa-skype"></i></a></li>
+                </ul>
+
+                <ul class="copyright">
+                <li>&copy; Copyright 2018</li>
+                </ul>
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#portfolio"><i class="icon-up-open"></i></a></div>
+
+        </div>
+
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init-portfolio.js"></script>
+
+</body>
+</html>

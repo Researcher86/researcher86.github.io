@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+</head>
+<body style="color: black; text-align: justify">
+
+<nav id="nav-wrap" style="display: block;" class="opaque">
+
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul id="nav" class="nav">
+        <li><a href="../index.html#home">Главная</a></li>
+        <li><a href="../index.html#about">Обо мне</a></li>
+        <li><a href="../index.html#resume">Резюме</a></li>
+        <li class="current"><a href="../index.html#portfolio">Портфолио</a></li>
+    </ul> <!-- end #nav -->
+
+</nav> <!-- end #nav-wrap -->
+
+    <section id="portfolio">
+        <div class="row skill">
+            <div style="text-align: center">
+                <h2>Веб-приложение для системных аналитиков</h2>
+            </div>
+            <p>
+                Принимал участие в разработке веб-приложения для системных аналитиков.
+                Система позволяет системным аналитикам создавать стандартное CRUD приложение,
+                по средствам написания JSON схемы структур хранения данных.
+                В JSON схеме было реализовано <strong>наследование структур данных и создание собственных типов данных</strong>.
+                На основе данной схемы, система генерировала структуру БД и предоставляла веб-интерфейс,
+                для предоставления пользователю возможности ввода данных в систему. <strong>Для реализации работы
+                CRUD с динамически сгенерированной структурой хранения данных, использовался протокол OData v4.</strong>>
+                Используемые технологии: JS (dxDataGrid), Java, Spring Boot, Thymeleaf, JUnit, Maven, PostgreSQL.
+                Приложение разработано в ООО "Интегрикс" для системных аналитиков компании.
+            </p>
+            <div style="text-align: center">
+                <img src="../images/portfolio/rdev/1.png">
+            </div>
+            <ol>
+                <li>функции редактирования</li>
+                <li>пагинация</li>
+                <li>фильтр</li>
+            </ol>
+            <div style="text-align: center">
+                <img src="../images/portfolio/rdev/2.png">
+            </div>
+            <ol>
+                <li>
+                    выбор значения из список фиксированных значений для данной колонки (хранится в JSON схеме).
+                    <div style="text-align: center; margin-top: 10px">
+                        <img src="../images/portfolio/rdev/3.png">
+                    </div>
+                </li>
+                <li>
+                    выбор значения из справочной структуры/таблицы данных.
+                </li>
+            </ol>
+            <div style="text-align: center;">
+                <img src="../images/portfolio/rdev/4.png">
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <img src="../images/portfolio/rdev/5.png">
+            </div>
+           </div>
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="skype:alpenov_tanat?chat"><i class="fa fa-skype"></i></a></li>
+                </ul>
+
+                <ul class="copyright">
+                <li>&copy; Copyright 2018</li>
+                </ul>
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#portfolio"><i class="icon-up-open"></i></a></div>
+
+        </div>
+
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init-portfolio.js"></script>
+
+</body>
+</html>

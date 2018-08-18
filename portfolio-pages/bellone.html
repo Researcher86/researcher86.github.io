@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+</head>
+<body style="color: black; text-align: justify">
+
+<nav id="nav-wrap" style="display: block;" class="opaque">
+
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul id="nav" class="nav">
+        <li><a href="../index.html#home">Главная</a></li>
+        <li><a href="../index.html#about">Обо мне</a></li>
+        <li><a href="../index.html#resume">Резюме</a></li>
+        <li class="current"><a href="../index.html#portfolio">Портфолио</a></li>
+    </ul> <!-- end #nav -->
+
+</nav> <!-- end #nav-wrap -->
+
+    <section id="portfolio">
+        <div class="row skill">
+            <div style="text-align: center">
+                <h2>BellOne</h2>
+            </div>
+            <p>
+                Принимал участие в разработке микро сервисной системы USS в компании ООО "Бэлл Интегратор" http://bellintegrator.ru/.
+                Система разворачивалась на серверах AWS. Моя задача была работать над сервисами
+                <strong>upload-service</strong> – сервис предоставлял пользователю производить загрузку файлов в хранилище <strong>AWS S3</strong>,
+                для дальнейшей тренировки нейронной сети, и сервисом <strong>csi-service</strong> – этот сервис агрегирует в себе всю логику
+                по работе с пользовательскими данными, подпиской, покупкой, предоставляемых сервисов/услуг системы USS.
+                Технологический стек: Java 8, JUnit, Spring Boot(core, mvc, data, cloud), JPA/Hibernate, Flyway, Maven, PostgreSQL.
+            </p>
+            <div style="text-align: center">
+                <img src="../images/portfolio/bellone/1.png">
+            </div>
+            <br>
+            <div style="text-align: center">
+                <img src="../images/portfolio/bellone/2.png">
+            </div>
+            <br>
+            <h2>UI for upload-service.</h2>
+            <div style="text-align: center">
+                <img src="../images/portfolio/bellone/3.png">
+            </div>
+            <br>
+            <h2>S3 console.</h2>
+            <div style="text-align: center">
+                <img src="../images/portfolio/bellone/4.png">
+            </div>
+            <br>
+            <h2>Схема.</h2>
+            <div style="text-align: center">
+                <img src="../images/portfolio/bellone/5.png">
+            </div>
+           </div>
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="skype:alpenov_tanat?chat"><i class="fa fa-skype"></i></a></li>
+                </ul>
+
+                <ul class="copyright">
+                <li>&copy; Copyright 2018</li>
+                </ul>
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#portfolio"><i class="icon-up-open"></i></a></div>
+
+        </div>
+
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init-portfolio.js"></script>
+
+</body>
+</html>

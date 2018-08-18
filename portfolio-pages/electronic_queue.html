@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+</head>
+<body style="color: black; text-align: justify">
+
+<nav id="nav-wrap" style="display: block;" class="opaque">
+
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+    <ul id="nav" class="nav">
+        <li><a href="../index.html#home">Главная</a></li>
+        <li><a href="../index.html#about">Обо мне</a></li>
+        <li><a href="../index.html#resume">Резюме</a></li>
+        <li class="current"><a href="../index.html#portfolio">Портфолио</a></li>
+    </ul> <!-- end #nav -->
+
+</nav> <!-- end #nav-wrap -->
+
+    <section id="portfolio">
+        <div class="row skill">
+            <div style="text-align: center">
+                <h2>Электронная очередь</h2>
+            </div>
+            <p>
+                Принимал участие в разработке RESTful веб-сервиса для универсальной электронной очереди.
+                Универсальная электронная очередь, позволяет пользователям записываться во все учреждения посредством веба, мобильного приложения.
+                Т.к. сервисы электронных очередей могут предоставлять разные API и технологии для взаимодействия с ними (SOAP, REST, и т.д.),
+                в связи с этим было принято решение разработать систему для предоставления единого API.
+                Система предоставляет единый REST API для взаимодействия со сторонними системами электронных очередей,
+                но может работать, как и самостоятельная система, например, внутри организации, у которой нет аналогичной системы.
+                Интеграция со сторонними системами происходит по средствам разработки новых плагинов.
+                Используемые технологии: Java 8, Spring Boot, Maven, JUnit, Flyway, PostgreSQL (PL/pgSQL).
+                Приложение разработано в ООО "Интегрикс".
+            </p>
+            Проект разбит по стандартной многомодульной структуре Maven:
+            <ul class="disc">
+                <li><strong>server</strong> – модуль сервера, принимает все входящие запросы по протоколу HTTP и в зависимости от пришедших параметров делегирует запрос конкретной реализации плагина. Сервер ищет плагины в текущей директории в папке plugins.</li>
+                <li><strong>plugin-interface</strong> – модуль содержит все общие классы, интерфейсы для всех плагинов системы. Для реализации поддержки нового плагина в системе, нужно реализовать общий интерфейс Plugin.</li>
+                <li><strong>plugin-softrust</strong> – модуль реализовывает общий интерфейс плагинов, инкапсулирует взаимодействие с SOAP сервером электронной записи SofTrust</li>
+                <li>и т.д.</li>
+            </ul>
+            <p>
+                Схематичное представление.
+            </p>
+            <div style="text-align: center">
+                <img src="../images/portfolio/electronic_queue/1.png">
+            </div>
+            <p>
+                Web UI на 1C-Bitrix <a target="_blank" href="http://gosuslugi31.ru/reception/?type=doctor">http://gosuslugi31.ru</a>
+            </p>
+            <div style="text-align: center">
+                <img src="../images/portfolio/electronic_queue/2.png">
+            </div>
+           </div>
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="skype:alpenov_tanat?chat"><i class="fa fa-skype"></i></a></li>
+                </ul>
+
+                <ul class="copyright">
+                <li>&copy; Copyright 2018</li>
+                </ul>
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#portfolio"><i class="icon-up-open"></i></a></div>
+
+        </div>
+
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init-portfolio.js"></script>
+
+</body>
+</html>
