@@ -754,3 +754,10 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
 @media (max-width: 47.99rem) {
   .lang-switch { margin-left: auto; }
 }
+
+/* Case diagrams ----------------------------------------------------------- */
+.work-diagram {
+  margin: var(--space-4) 0 0;
+  max-width: 30rem;
+}
+.work-diagram svg { display: block; width: 100%; height: auto; }

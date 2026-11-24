@@ -75,7 +75,7 @@
         <li><a href="#labs">Лаборатории</a></li>
         <li><a href="#work">Проекты</a></li>
         <li><a href="#experience">Опыт</a></li>
-        <li><a href="#writing">Тексты</a></li>
+        <li><a href="#writing">Книга</a></li>
         <li><a href="#contact">Контакты</a></li>
       </ul>
     </nav>
@@ -95,7 +95,7 @@
       <div>
         <p class="hero-name">Танат Альпенов</p>
         <h1 id="hero-title">Senior PHP Backend-разработчик</h1>
-        <p class="hero-role">Разработка с ИИ-агентами: Claude Code и Codex</p>
+        <p class="hero-role">Архитектура backend-систем, производительность и системное программирование</p>
         <p class="hero-tagline">Создаю надёжные backend-системы, изучаю архитектуру и работаю над производительностью.</p>
         <p class="hero-intro">Более 12 лет коммерческой разработки. Backend, проектирование систем, оптимизация производительности и понимание того, как программные системы устроены внутри.</p>
         <div class="actions">
@@ -254,6 +254,7 @@
             <li>Обязательные тесты (PHPUnit, Behat) и проверка кодстайла в CI</li>
             <li>Локальное Docker-окружение, совпадающее с продом</li>
             <li>Статический анализ с PHPStan</li>
+            <li>Общий пакет проверок качества кода для всех PHP-проектов</li>
           </ul>
           <p class="source">Продакшен; PHPStan level 8 — в лабораториях.</p>
         </article>
@@ -281,7 +282,7 @@
 
       <div class="subsection">
         <h3>PHP Systems Lab</h3>
-        <p>Девять проектов: от памяти и процессов до платформы, которая объединяет их через настоящие границы процессов и сети. <a href="https://github.com/Researcher86/php-systems-lab">Обзорный репозиторий</a>.</p>
+        <p>Девять проектов: от памяти и процессов до платформы, которая объединяет их через настоящие границы процессов и сети. <a href="https://github.com/Researcher86/php-systems-lab">Обзорный репозиторий</a>. По каждому проекту есть главы в <a href="#writing">книге Engineering Lab</a>.</p>
 
         <ol class="stack" reversed>
           <li>
@@ -291,7 +292,7 @@
                 <p>Интеграционный проект: HTTP, кеш, база данных, поиск, задачи и воркеры из предыдущих проектов работают вместе как одна backend-платформа.</p>
                 <p class="question">Как сбои и обратное давление должны распространяться между компонентами?</p>
                 <ul class="tags"><li>PHP 8.5</li><li>многопроцессность</li><li>событийная модель</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/22-component-boundaries-and-process-ownership.md">Книга: гл. 22–25</a></div>
               </div>
             </details>
           </li>
@@ -302,7 +303,7 @@
                 <p>Сервис полнотекстового поиска: нормализация Unicode, стемминг Snowball, инвертированный индекс, ранжирование BM25, append-only журнал и восстановление после сбоя.</p>
                 <p class="question">Что значит «более релевантно», если выразить это числом?</p>
                 <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>инвертированный индекс</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/19-text-analysis.md">Книга: гл. 19–21</a></div>
               </div>
             </details>
           </li>
@@ -313,7 +314,7 @@
                 <p>Небольшой реляционный движок: страницы и записи, индексы на B-деревьях, парсер и исполнитель SQL, транзакции, журнал упреждающей записи и восстановление после сбоя.</p>
                 <p class="question">Как база данных восстанавливается после сбоя?</p>
                 <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/15-pages-records-and-b-trees.md">Книга: гл. 15–18</a></div>
               </div>
             </details>
           </li>
@@ -324,7 +325,7 @@
                 <p>Событийный HTTP-сервер: разбор запросов, маршрутизация, middleware, буферизация ответов и keep-alive.</p>
                 <p class="question">Что происходит, когда клиент медленнее сервера?</p>
                 <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/13-http-incremental-parsing-and-framing.md">Книга: гл. 13–14</a></div>
               </div>
             </details>
           </li>
@@ -335,7 +336,7 @@
                 <p>Событийный in-memory сервер с протоколом RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> с <code>WATCH</code>, снапшоты через дочерний процесс и измерение справедливости event loop.</p>
                 <p class="question">Как один event loop обслуживает много соединений и что будет, если один клиент станет слишком дорогим?</p>
                 <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>неблокирующий I/O</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/10-tcp-server-connections-and-buffers.md">Книга: гл. 10–12</a></div>
               </div>
             </details>
           </li>
@@ -346,7 +347,7 @@
                 <p>Надёжные фоновые задачи: аренда доставки и fencing, подтверждения, повторы с backoff, отложенные задачи, приоритеты, dead letters и хранение в append-only файле.</p>
                 <p class="question">Что на самом деле значит «надёжная доставка», если воркер упал посреди задачи?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only журнал</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/08-reliable-queue-ack-retries.md">Книга: гл. 08–09</a></div>
               </div>
             </details>
           </li>
@@ -357,7 +358,7 @@
                 <p>Постоянный пул master/worker: жизненный цикл и состояния воркеров, супервизия, протокол с префиксом длины и correlation ID, draining, таймауты, backpressure, graceful reload и автомасштабирование.</p>
                 <p class="question">Как пул долгоживущих воркеров остановить, не потеряв запросы в обработке?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix-сокеты</li><li>stream_select</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/06-worker-pool.md">Книга: гл. 06–07</a></div>
               </div>
             </details>
           </li>
@@ -368,7 +369,7 @@
                 <p>Курс из 38 уроков с запускаемыми экспериментами: процессы, IPC, супервизия, producer/consumer, конвейеры, акторы, work stealing, event loop, Fibers и самописные рантаймы в стиле PHP-FPM, RoadRunner и Messenger.</p>
                 <p class="question">Как работает event loop и какую задачу решают Fibers?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Уроки на русском</span></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/03-processes-and-ipc.md">Книга: гл. 03–05</a><span class="source">Уроки на русском</span></div>
               </div>
             </details>
           </li>
@@ -379,7 +380,7 @@
                 <p>Память глазами PHP: RSS, сборка мусора, <code>fork()</code> и copy-on-write, <code>mmap</code>, разделяемая память, кольцевой буфер в разделяемой памяти, FFI и нативная память.</p>
                 <p class="question">Что на самом деле происходит с памятью после <code>fork()</code>?</p>
                 <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>сокеты</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/01-process-memory.md">Книга: гл. 01–03</a></div>
               </div>
             </details>
           </li>
@@ -469,6 +470,55 @@
       <div class="work-list">
         <article class="work">
           <div class="work-head">
+            <h3>Общий пакет проверок качества кода</h3>
+            <p class="work-meta">systeme.io · 2026</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Много PHP-репозиториев — сервисы, Symfony-бандлы и DTO-пакеты — и в каждом своя настройка GrumPHP, PHPStan, PHP CS Fixer и CI.</dd>
+            <dt>Задача</dt>
+            <dd>Правила и версии инструментов расходились между проектами, а одни и те же проверки каждый репозиторий поддерживал отдельно.</dd>
+            <dt>Что сделал</dt>
+            <dd>
+              <ul class="list">
+                <li>Написал основу внутреннего Composer-пакета, который приносит в каждый проект инструменты, их конфигурацию и запуск тестов (PHPUnit, ParaTest).</li>
+                <li>Единый набор целей <code>make cq-*</code> для трёх типов проектов — base, bundle и service — одинаково работает локально, в pre-commit хуке и в CI.</li>
+                <li>Переиспользуемые GitHub workflows с одной обязательной проверкой.</li>
+                <li>Composer-плагин, который поддерживает в проекте актуальными подключение Makefile и правила для ИИ-агентов.</li>
+                <li>Интеграционные тесты сервиса запускаются в собственном Docker-стенде — отдельном для каждого git checkout, чтобы параллельные worktree не мешали друг другу.</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Composer</li><li>PHPStan</li><li>PHP CS Fixer</li><li>PHPUnit</li><li>ParaTest</li><li>GitHub Actions</li><li>Docker Compose</li><li>Make</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Интеграционные тесты монолита</h3>
+            <p class="work-meta">systeme.io · 2026</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Большой монолит на Symfony с набором интеграционных тестов, которые работают с настоящими базами данных в Docker.</dd>
+            <dt>Задача</dt>
+            <dd>Тесты шли медленно, а подготовка окружения дублировалась между тест-кейсами.</dd>
+            <dt>Что сделал</dt>
+            <dd>
+              <ul class="list">
+                <li>Нашёл, куда уходило время: режим отладки и Xdebug в прогонах тестов и настоящие сетевые вызовы — отправка ошибок и внутренние API — прямо из тестов.</li>
+                <li>Заменил эти вызовы тестовыми двойниками, включил OPcache для CLI и добавил параллельный запуск через ParaTest.</li>
+                <li>Добавил счётчик запросов Doctrine, чтобы тесты проверяли, сколько запросов делает код.</li>
+                <li>Сделал общий bootstrap для интеграционных тестов, разделил фикстуры и вынес конфигурацию тестовых сервисов из основной.</li>
+                <li>Дал каждому git checkout собственный тестовый стенд, чтобы несколько worktree могли гонять тесты одновременно.</li>
+              </ul>
+            </dd>
+          </dl>
+          <p class="metric"><strong>14×</strong> быстрее прогон интеграционных тестов</p>
+          <ul class="tags"><li>PHPUnit</li><li>ParaTest</li><li>OPcache</li><li>Doctrine</li><li>Docker Compose</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
             <h3>Центральный сервис каталога</h3>
             <p class="work-meta">Innovation Group · 2021–2026</p>
           </div>
@@ -488,6 +538,35 @@
               </ul>
             </dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 200" role="img" aria-labelledby="catalog-diagram-title">
+              <title id="catalog-diagram-title">Центральный каталог: сервис каталога публикует изменения в RabbitMQ, каждый продукт их получает; CSV-файлы продуктов хранятся в S3.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M326 28H344"/>
+                <path d="M216 48V78"/>
+                <path d="M216 116V136M70 136H362" marker-end="none"/>
+                <path d="M70 136V156"/>
+                <path d="M216 136V156"/>
+                <path d="M362 136V156"/>
+              </g>
+              <rect class="d-box-accent" x="106" y="8" width="220" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="346" y="10" width="80" height="36" rx="6"/>
+                <rect x="146" y="80" width="140" height="36" rx="6"/>
+                <rect x="10" y="158" width="120" height="36" rx="6"/>
+                <rect x="156" y="158" width="120" height="36" rx="6"/>
+                <rect x="302" y="158" width="120" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="216" y="28" class="d-label-accent">Каталог · CQRS</text>
+                <text x="386" y="28">S3 · CSV</text>
+                <text x="216" y="98">RabbitMQ</text>
+                <text x="70" y="176">Продукт A</text>
+                <text x="216" y="176">Продукт B</text>
+                <text x="362" y="176">Продукт C</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>CQRS</li><li>RabbitMQ</li><li>AWS S3</li><li>GitLab CI</li></ul>
         </article>
 
@@ -508,11 +587,11 @@
                 <li>Внедрил primary/replica, чтобы мощность базы и счёт следовали за нагрузкой.</li>
                 <li>Помог найти ошибку, из-за которой Redis был загружен на 100%; нагрузка и стоимость вернулись к прежним.</li>
                 <li>Устранил неконтролируемую генерацию сообщений в RabbitMQ, задерживавшую обновления у потребителей, и переделал обработку событий, чтобы падение одного слушателя не роняло остальные.</li>
-                <li>Включил OPcache во всех сервисах и перевёл главную страницу на RoadRunner; preloading и JIT ускорили тесты в 10 раз.</li>
+                <li>Включил OPcache во всех сервисах и перевёл главную страницу на RoadRunner; preloading и JIT сократили время полного прогона тестов в 10 раз.</li>
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>10×</strong> быстрее тесты после включения preloading и JIT</p>
+          <p class="metric"><strong>10×</strong> быстрее полный прогон тестов после включения preloading и JIT</p>
           <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
         </article>
 
@@ -527,6 +606,25 @@
             <dt>Что сделал</dt>
             <dd>Сделал сквозной поиск с ранжированием по релевантности, транслитерацией и исправлением раскладки. Позже написал отдельный поисковый сервис на Swoole и Elasticsearch/OpenSearch, который ускорил поиск.</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 56" role="img" aria-labelledby="search-diagram-title">
+              <title id="search-diagram-title">Путь поискового запроса: главная страница обращается к отдельному поисковому сервису на Swoole, который делает запрос в OpenSearch.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M112 28H144"/>
+                <path d="M296 28H328"/>
+              </g>
+              <rect class="d-box-accent" x="146" y="8" width="150" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="6" y="10" width="106" height="36" rx="6"/>
+                <rect x="330" y="10" width="96" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="59" y="28">Главная</text>
+                <text x="221" y="28" class="d-label-accent">Поиск · Swoole</text>
+                <text x="378" y="28">OpenSearch</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>PHP</li><li>Swoole</li><li>Elasticsearch</li><li>OpenSearch</li></ul>
         </article>
 
@@ -630,9 +728,15 @@
           <div>
             <h3>Senior PHP Backend-разработчик <span class="role-company">· <a href="https://systeme.io/">systeme.io</a></span></h3>
             <p>Высоконагруженная SaaS-платформа для ведения онлайн-бизнеса; клиенты по всему миру, большинство — в Европе и США.</p>
-            <p>Backend CRM (воронки сделок, правила доступа, фильтрация) и сценарии аккаунтов в большом монолите на Symfony; поэтапно внедрил <code>strict_types</code> во всю кодовую базу.</p>
+            <p>Backend CRM и сценариев аккаунтов в большом монолите на Symfony:</p>
+            <ul class="list">
+              <li>Сделки CRM: история этапов, одна сделка на контакт в воронке на уровне базы данных, суммы в минимальных единицах с диапазоном по валюте, правила доступа для ассистентов, поиск и фильтры сделок.</li>
+              <li>Написал основу общего пакета проверок качества кода для PHP-проектов компании (см. <a href="#work">Проекты</a>).</li>
+              <li>Поэтапно внедряю <code>strict_types</code> во всю кодовую базу.</li>
+              <li>Ускорил интеграционные тесты в 14 раз и дал каждому git checkout собственный тестовый стенд (см. <a href="#work">Проекты</a>).</li>
+            </ul>
             <p>Каждый день работаю с ИИ-агентами (Claude Code, Codex), настроил автоматическое Codex-ревью pull request в CI.</p>
-            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
           </div>
         </li>
         <li class="role">
@@ -718,7 +822,7 @@
   <!-- Writing -->
   <section class="section" id="writing" aria-labelledby="writing-title">
     <div class="container">
-      <p class="section-label">Тексты</p>
+      <p class="section-label">Книга</p>
       <h2 id="writing-title">Книга Engineering Lab</h2>
       <p class="lead">Мои учебные конспекты, написанные по зафиксированному коду каждой лаборатории.</p>
 

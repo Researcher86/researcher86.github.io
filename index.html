@@ -75,7 +75,7 @@
         <li><a href="#labs">Labs</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#writing">Writing</a></li>
+        <li><a href="#writing">Book</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -95,7 +95,7 @@
       <div>
         <p class="hero-name">Tanat Alpenov</p>
         <h1 id="hero-title">Senior PHP Backend Engineer</h1>
-        <p class="hero-role">AI-assisted engineering with Claude Code and Codex</p>
+        <p class="hero-role">Backend architecture, performance and systems programming</p>
         <p class="hero-tagline">Building reliable backend systems, exploring system architecture, and engineering for performance.</p>
         <p class="hero-intro">12+ years of commercial software development. Focused on backend engineering, system design, performance optimization, and understanding the internals of software systems.</p>
         <div class="actions">
@@ -254,6 +254,7 @@
             <li>Tests (PHPUnit, Behat) and code-style checks required in CI</li>
             <li>Local Docker environment matching production</li>
             <li>Static analysis with PHPStan</li>
+            <li>One shared code-quality package for every PHP project</li>
           </ul>
           <p class="source">Production work; PHPStan level 8 in the labs.</p>
         </article>
@@ -281,7 +282,7 @@
 
       <div class="subsection">
         <h3>PHP Systems Lab</h3>
-        <p>Nine projects, from memory and processes up to a platform that joins them over real process and network boundaries. <a href="https://github.com/Researcher86/php-systems-lab">Overview repository</a>.</p>
+        <p>Nine projects, from memory and processes up to a platform that joins them over real process and network boundaries. <a href="https://github.com/Researcher86/php-systems-lab">Overview repository</a>. Each project has chapters in the <a href="#writing">Engineering Lab book</a>.</p>
 
         <ol class="stack" reversed>
           <li>
@@ -291,7 +292,7 @@
                 <p>The integration project: HTTP, cache, database, search, jobs and workers from the previous projects running together as one backend platform.</p>
                 <p class="question">How should failures and backpressure move between components?</p>
                 <ul class="tags"><li>PHP 8.5</li><li>multi-process</li><li>event-driven</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/22-component-boundaries-and-process-ownership.md">Book: ch. 22–25</a></div>
               </div>
             </details>
           </li>
@@ -302,7 +303,7 @@
                 <p>A full-text search service: Unicode normalization, Snowball stemming, an inverted index, BM25 ranking, an append-only log and crash recovery.</p>
                 <p class="question">What does “more relevant” mean, as a number?</p>
                 <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>inverted index</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/19-text-analysis.md">Book: ch. 19–21</a></div>
               </div>
             </details>
           </li>
@@ -313,7 +314,7 @@
                 <p>A small relational engine: pages and records, B-tree indexes, a SQL parser and executor, transactions, a write-ahead log and crash recovery.</p>
                 <p class="question">How can a database recover after a crash?</p>
                 <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/15-pages-records-and-b-trees.md">Book: ch. 15–18</a></div>
               </div>
             </details>
           </li>
@@ -324,7 +325,7 @@
                 <p>An event-driven HTTP server: request parsing, routing, middleware, response buffering and keep-alive.</p>
                 <p class="question">What happens when a client is slower than the server?</p>
                 <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/13-http-incremental-parsing-and-framing.md">Book: ch. 13–14</a></div>
               </div>
             </details>
           </li>
@@ -335,7 +336,7 @@
                 <p>An event-driven in-memory server speaking RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> with <code>WATCH</code>, snapshots through a forked child, and measured event-loop fairness.</p>
                 <p class="question">How does one event loop serve many connections, and what happens when one client becomes too expensive?</p>
                 <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>non-blocking I/O</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/10-tcp-server-connections-and-buffers.md">Book: ch. 10–12</a></div>
               </div>
             </details>
           </li>
@@ -346,7 +347,7 @@
                 <p>Reliable background jobs: delivery leases and fencing, acknowledgements, retries with backoff, delayed jobs, priorities, dead letters, and append-only file persistence.</p>
                 <p class="question">What does “reliable delivery” actually mean when a worker crashes mid-job?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only log</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/08-reliable-queue-ack-retries.md">Book: ch. 08–09</a></div>
               </div>
             </details>
           </li>
@@ -357,7 +358,7 @@
                 <p>A persistent master/worker pool: worker lifecycle and states, supervision, a length-prefixed protocol with correlation IDs, draining, timeouts, backpressure, graceful reload and autoscaling.</p>
                 <p class="question">How can a pool of long-lived workers shut down without dropping requests in flight?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix sockets</li><li>stream_select</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/06-worker-pool.md">Book: ch. 06–07</a></div>
               </div>
             </details>
           </li>
@@ -368,7 +369,7 @@
                 <p>A 38-lesson course of runnable experiments: processes, IPC, supervision, producer/consumer, pipelines, actors, work stealing, event loops, Fibers, and hand-built PHP-FPM-, RoadRunner- and Messenger-style runtimes.</p>
                 <p class="question">How do event loops work, and what problem do Fibers solve?</p>
                 <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Lessons in Russian</span></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/03-processes-and-ipc.md">Book: ch. 03–05</a><span class="source">Lessons in Russian</span></div>
               </div>
             </details>
           </li>
@@ -379,7 +380,7 @@
                 <p>Memory from PHP's side: RSS, garbage collection, <code>fork()</code> and copy-on-write, <code>mmap</code>, shared memory, a shared-memory ring buffer, FFI and native memory.</p>
                 <p class="question">What actually happens to memory after <code>fork()</code>?</p>
                 <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>sockets</li></ul>
-                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/blob/master/php-systems-lab/01-process-memory.md">Book: ch. 01–03</a></div>
               </div>
             </details>
           </li>
@@ -469,6 +470,55 @@
       <div class="work-list">
         <article class="work">
           <div class="work-head">
+            <h3>Shared code-quality package</h3>
+            <p class="work-meta">systeme.io · 2026</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>Many PHP repositories — services, Symfony bundles and DTO packages — each kept its own setup of GrumPHP, PHPStan, PHP CS Fixer and CI workflows.</dd>
+            <dt>Problem</dt>
+            <dd>Rules and tool versions drifted between projects, and every repository maintained the same checks separately.</dd>
+            <dt>Contribution</dt>
+            <dd>
+              <ul class="list">
+                <li>Built the core of an internal Composer package that brings the tools, their configuration and the test runners (PHPUnit, ParaTest) to every project.</li>
+                <li>One set of <code>make cq-*</code> targets for three project types — base, bundle and service — run the same way locally, in a pre-commit hook and in CI.</li>
+                <li>Reusable GitHub workflows behind one required check.</li>
+                <li>A Composer plugin that keeps the Makefile include and the agent rules in each project up to date.</li>
+                <li>Integration tests of a service run in a Docker test stack of their own, one per git checkout, so parallel worktrees do not collide.</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Composer</li><li>PHPStan</li><li>PHP CS Fixer</li><li>PHPUnit</li><li>ParaTest</li><li>GitHub Actions</li><li>Docker Compose</li><li>Make</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Monolith integration tests</h3>
+            <p class="work-meta">systeme.io · 2026</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>A large Symfony monolith with an integration test suite that runs against real databases in Docker.</dd>
+            <dt>Problem</dt>
+            <dd>The suite was slow, and the test setup was duplicated across test cases.</dd>
+            <dt>Contribution</dt>
+            <dd>
+              <ul class="list">
+                <li>Found where the time went: debug mode and Xdebug in test runs, and real network calls — error reporting and internal APIs — made from inside tests.</li>
+                <li>Replaced those calls with test doubles, enabled OPcache for CLI runs and added parallel runs with ParaTest.</li>
+                <li>Added a Doctrine query counter, so tests can assert how many queries a code path makes.</li>
+                <li>Introduced a shared bootstrap for integration tests, split the fixtures and moved test service configuration out of the main config.</li>
+                <li>Gave each git checkout its own test stack, so several worktrees can run the suite at once.</li>
+              </ul>
+            </dd>
+          </dl>
+          <p class="metric"><strong>14×</strong> faster integration test run</p>
+          <ul class="tags"><li>PHPUnit</li><li>ParaTest</li><li>OPcache</li><li>Doctrine</li><li>Docker Compose</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
             <h3>Central catalog service</h3>
             <p class="work-meta">Innovation Group · 2021–2026</p>
           </div>
@@ -488,6 +538,35 @@
               </ul>
             </dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 200" role="img" aria-labelledby="catalog-diagram-title">
+              <title id="catalog-diagram-title">Central catalog: the catalog service publishes changes to RabbitMQ, each product consumes them; per-product CSV files are kept in S3.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M326 28H344"/>
+                <path d="M216 48V78"/>
+                <path d="M216 116V136M70 136H362" marker-end="none"/>
+                <path d="M70 136V156"/>
+                <path d="M216 136V156"/>
+                <path d="M362 136V156"/>
+              </g>
+              <rect class="d-box-accent" x="106" y="8" width="220" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="346" y="10" width="80" height="36" rx="6"/>
+                <rect x="146" y="80" width="140" height="36" rx="6"/>
+                <rect x="10" y="158" width="120" height="36" rx="6"/>
+                <rect x="156" y="158" width="120" height="36" rx="6"/>
+                <rect x="302" y="158" width="120" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="216" y="28" class="d-label-accent">Catalog service · CQRS</text>
+                <text x="386" y="28">S3 · CSV</text>
+                <text x="216" y="98">RabbitMQ</text>
+                <text x="70" y="176">Product A</text>
+                <text x="216" y="176">Product B</text>
+                <text x="362" y="176">Product C</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>CQRS</li><li>RabbitMQ</li><li>AWS S3</li><li>GitLab CI</li></ul>
         </article>
 
@@ -508,11 +587,11 @@
                 <li>Introduced primary/replica databases so capacity, and the bill, follow the load.</li>
                 <li>Helped find the bug that kept Redis at 100% load; it returned to its previous level and cost.</li>
                 <li>Fixed uncontrolled message generation in RabbitMQ that delayed updates to consumers, and reworked event handling so one failing listener no longer brings down the rest.</li>
-                <li>Enabled OPcache across services and moved a homepage to RoadRunner; preloading and JIT made the test suite 10× faster.</li>
+                <li>Enabled OPcache across services and moved a homepage to RoadRunner; preloading and JIT cut the full test run time by 10×.</li>
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>10×</strong> faster test suite after enabling preloading and JIT</p>
+          <p class="metric"><strong>10×</strong> shorter full test run after enabling preloading and JIT</p>
           <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
         </article>
 
@@ -527,6 +606,25 @@
             <dt>Contribution</dt>
             <dd>Built site-wide search with relevance ranking, transliteration and keyboard-layout correction. Later built a separate search service on Swoole and Elasticsearch/OpenSearch, which made search faster.</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 56" role="img" aria-labelledby="search-diagram-title">
+              <title id="search-diagram-title">Search request path: the homepage calls a separate search service on Swoole, which queries OpenSearch.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M112 28H144"/>
+                <path d="M296 28H328"/>
+              </g>
+              <rect class="d-box-accent" x="146" y="8" width="150" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="6" y="10" width="106" height="36" rx="6"/>
+                <rect x="330" y="10" width="96" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="59" y="28">Homepage</text>
+                <text x="221" y="28" class="d-label-accent">Search · Swoole</text>
+                <text x="378" y="28">OpenSearch</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>PHP</li><li>Swoole</li><li>Elasticsearch</li><li>OpenSearch</li></ul>
         </article>
 
@@ -630,9 +728,15 @@
           <div>
             <h3>Senior PHP Backend Engineer <span class="role-company">· <a href="https://systeme.io/">systeme.io</a></span></h3>
             <p>A high-load SaaS platform for running an online business; customers worldwide, mostly in Europe and the US.</p>
-            <p>Backend work on the CRM (deal pipelines, access rules, filtering) and on account flows in a large Symfony monolith; carried out an incremental rollout of <code>strict_types</code> across the codebase.</p>
+            <p>Backend work on the CRM and on account flows in a large Symfony monolith:</p>
+            <ul class="list">
+              <li>CRM deals: stage history, one deal per contact in a pipeline enforced by the database, amounts stored in minor units with per-currency ranges, access rules for assistants, deal search and filters.</li>
+              <li>Built the core of the shared code-quality package used across the company's PHP projects (see <a href="#work">Selected work</a>).</li>
+              <li>Rolling out <code>strict_types</code> across the codebase step by step.</li>
+              <li>Made the integration test suite 14× faster and gave each git checkout its own test stack (see <a href="#work">Selected work</a>).</li>
+            </ul>
             <p>Work daily with coding agents (Claude Code, Codex) and set up automated Codex review for pull requests in CI.</p>
-            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
           </div>
         </li>
         <li class="role">
@@ -718,7 +822,7 @@
   <!-- Writing -->
   <section class="section" id="writing" aria-labelledby="writing-title">
     <div class="container">
-      <p class="section-label">Writing</p>
+      <p class="section-label">Book</p>
       <h2 id="writing-title">Engineering Lab book</h2>
       <p class="lead">My study notes, written in Russian from the tagged code of each lab. English notes are not published yet.</p>
 
