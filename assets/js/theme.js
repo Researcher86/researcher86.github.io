@@ -9,7 +9,10 @@
     root.dataset.theme = theme;
     var button = document.querySelector('.theme-toggle');
     if (button) {
-      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      // Labels come from the page so each language version announces its own text.
+      button.setAttribute('aria-label', theme === 'dark'
+        ? (button.dataset.labelLight || 'Switch to light theme')
+        : (button.dataset.labelDark || 'Switch to dark theme'));
     }
   }
 

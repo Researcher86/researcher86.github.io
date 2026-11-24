@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Танат Альпенов — Senior PHP Backend-разработчик</title>
+  <meta name="description" content="Танат Альпенов, Senior PHP Backend-разработчик, работаю с ИИ-агентами. Архитектура backend, проектирование систем и производительность; личные учебные лаборатории по пулам воркеров, очередям задач, кешам, HTTP-серверам и базам данных на PHP.">
+  <meta name="author" content="Танат Альпенов">
+  <link rel="canonical" href="https://researcher86.github.io/ru/">
+  <link rel="alternate" hreflang="en" href="https://researcher86.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://researcher86.github.io/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://researcher86.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://researcher86.github.io/ru/">
+  <meta property="og:title" content="Танат Альпенов — Senior PHP Backend-разработчик">
+  <meta property="og:description" content="Архитектура backend, проектирование систем и производительность. Учебные лаборатории по процессам, конкурентности, очередям, кешам, базам данных и поиску на PHP.">
+  <meta property="og:image" content="https://researcher86.github.io/assets/images/tanat.jpg">
+  <meta property="profile:first_name" content="Танат">
+  <meta property="profile:last_name" content="Альпенов">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Танат Альпенов — Senior PHP Backend-разработчик">
+  <meta name="twitter:description" content="Архитектура backend, проектирование систем и производительность. Учебные лаборатории по устройству PHP и распределённых систем.">
+  <meta name="twitter:image" content="https://researcher86.github.io/assets/images/tanat.jpg">
+
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfbfc" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <script src="../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Танат Альпенов",
+    "jobTitle": "Senior PHP Backend Engineer",
+    "worksFor": { "@type": "Organization", "name": "systeme.io", "url": "https://systeme.io/" },
+    "url": "https://researcher86.github.io/ru/",
+    "image": "https://researcher86.github.io/assets/images/tanat.jpg",
+    "email": "mailto:researcher2286@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Костанай", "addressCountry": "KZ" },
+    "sameAs": [
+      "https://github.com/Researcher86",
+      "https://www.linkedin.com/in/researcher2286",
+      "https://t.me/researcher2286"
+    ],
+    "knowsAbout": ["PHP", "Symfony", "Backend architecture", "System design", "Concurrency", "Distributed systems"]
+  }
+  </script>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.6 7.6 0 0 0-4 0c-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A8 8 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.94 3.3 18.6 19.05c-.25 1.1-.9 1.38-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.16 9.38-8.47c.41-.36-.09-.57-.63-.21L5.77 12.5.78 10.94c-1.08-.34-1.1-1.08.23-1.6L20.5 1.83c.9-.33 1.69.21 1.44 1.47Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">tanat.alpenov</a>
+    <nav class="site-nav" aria-label="Разделы">
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#focus">Фокус</a></li>
+        <li><a href="#labs">Лаборатории</a></li>
+        <li><a href="#work">Проекты</a></li>
+        <li><a href="#experience">Опыт</a></li>
+        <li><a href="#writing">Тексты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="lang-switch" href="../" hreflang="en" lang="en" title="English version">EN</a>
+    <button class="theme-toggle" type="button" aria-label="Переключить тему" data-label-light="Включить светлую тему" data-label-dark="Включить тёмную тему">
+      <svg class="icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+      <svg class="icon-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div>
+        <p class="hero-name">Танат Альпенов</p>
+        <h1 id="hero-title">Senior PHP Backend-разработчик</h1>
+        <p class="hero-role">Разработка с ИИ-агентами: Claude Code и Codex</p>
+        <p class="hero-tagline">Создаю надёжные backend-системы, изучаю архитектуру и работаю над производительностью.</p>
+        <p class="hero-intro">Более 12 лет коммерческой разработки. Backend, проектирование систем, оптимизация производительности и понимание того, как программные системы устроены внутри.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#labs">Смотреть лаборатории</a>
+          <a class="button" href="https://github.com/Researcher86">
+            <svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub
+          </a>
+          <a class="button" href="#contact">Связаться</a>
+        </div>
+      </div>
+
+      <figure class="hero-diagram">
+        <svg viewBox="0 0 432 360" role="img" aria-labelledby="diagram-title">
+          <title id="diagram-title">Архитектура php-systems-platform: HTTP-сервер передаёт запросы в среду выполнения приложения, которая использует кеш, базу данных, поиск и очередь задач; воркеры обрабатывают задачи и обновляют поиск; всё работает поверх системного уровня.</title>
+          <defs>
+            <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path class="d-arrow" d="M0 0 8 4 0 8Z"/>
+            </marker>
+          </defs>
+          <g class="d-lines" marker-end="url(#arrow)">
+            <path d="M216 44V82"/>
+            <path d="M216 124V146M54 146H378" marker-end="none"/>
+            <path d="M54 146V166"/>
+            <path d="M162 146V166"/>
+            <path d="M270 146V166"/>
+            <path d="M378 146V166"/>
+            <path d="M378 204V238"/>
+            <path d="M330 258H270V206"/>
+            <path d="M54 204V310"/>
+            <path d="M162 204V310"/>
+            <path d="M378 276V310"/>
+          </g>
+          <g class="d-box">
+            <rect x="166" y="8" width="100" height="36" rx="6"/>
+            <rect x="6" y="168" width="96" height="36" rx="6"/>
+            <rect x="114" y="168" width="96" height="36" rx="6"/>
+            <rect x="222" y="168" width="96" height="36" rx="6"/>
+            <rect x="330" y="168" width="96" height="36" rx="6"/>
+            <rect x="330" y="240" width="96" height="36" rx="6"/>
+            <rect x="6" y="312" width="420" height="40" rx="6"/>
+          </g>
+          <rect class="d-box-accent" x="116" y="84" width="200" height="40" rx="6"/>
+          <g class="d-label">
+            <text x="216" y="30">HTTP</text>
+            <text x="216" y="108" class="d-label-accent">Application runtime</text>
+            <text x="54" y="190">Cache</text>
+            <text x="162" y="190">Database</text>
+            <text x="270" y="190">Search</text>
+            <text x="378" y="190">Jobs</text>
+            <text x="378" y="262">Workers</text>
+            <text x="216" y="336">System runtime: processes · memory · I/O</text>
+          </g>
+        </svg>
+        <figcaption><a href="https://github.com/Researcher86/php-systems-platform">php-systems-platform</a>: компоненты PHP Systems Lab, работающие как один backend.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <dl class="stats">
+        <div><dt>Лет коммерческой разработки</dt><dd>12+</dd></div>
+        <div><dt>Публичных репозиториев лабораторий</dt><dd>15</dd></div>
+        <div><dt>Глав книги по лабораториям</dt><dd>54</dd></div>
+        <div><dt>Учебных проектов по устройству backend</dt><dd>9</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <p class="section-label">Обо мне</p>
+      <h2 id="about-title">Backend-разработчик, которому важно, как всё устроено внутри</h2>
+      <div class="about">
+        <img class="about-photo" src="../assets/images/tanat.jpg" width="480" height="480" alt="Портрет Таната Альпенова" loading="lazy">
+        <div class="prose">
+          <p>Программирую с 2007 года, профессионально — с 2014-го. Первым местом работы был университет: я писал для него внутренние системы — антиплагиат на PHP и Java, систему регистрации документов и трекер задач. Также писал десктопные приложения на Delphi, в том числе FASM Editor.</p>
+          <p>С 2016 по 2018 год работал с backend на Java и Kotlin: REST-сервис с плагинами поверх сторонних систем электронных очередей, сервис загрузки данных из реестров юрлиц на RabbitMQ и микросервисы на Spring Boot в AWS. С 2018 года работаю в основном с PHP и Symfony: продукты в здравоохранении, регистрации доменов и мониторинге сетей, затем пять лет — группа высоконагруженных потребительских продуктов, сейчас — SaaS-платформа для онлайн-бизнеса.</p>
+          <p>Вне работы изучаю механизмы, на которых держатся backend-системы, собирая их упрощённые версии: пул воркеров, очередь задач, событийный кеш-сервер, HTTP-сервер, движок базы данных с журналом упреждающей записи. Держу их как шпаргалки. Предпочитаю инженерную работу руками, а не управление людьми.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering focus -->
+  <section class="section" id="focus" aria-labelledby="focus-title">
+    <div class="container">
+      <p class="section-label">Инженерный фокус</p>
+      <h2 id="focus-title">С чем работаю и что изучаю</h2>
+      <p class="lead">Области продакшен-опыта и того, что изучаю сейчас. Подпись под каждой карточкой говорит, откуда этот опыт.</p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Backend-разработка</h3>
+          <ul class="list">
+            <li>PHP 8, Symfony; раньше Yii и Laravel</li>
+            <li>Java и Kotlin на Spring Boot (2016–2018)</li>
+            <li>Проектирование REST API и интеграции со сторонними системами</li>
+            <li>Проектирование схем MySQL и PostgreSQL</li>
+          </ul>
+          <p class="source">Продакшен с 2014 года.</p>
+        </article>
+
+        <article class="card">
+          <h3>Производительность</h3>
+          <ul class="list">
+            <li>Поиск запроса или бага, который грузит базу и Redis</li>
+            <li>Primary/replica базы, масштабируемые по нагрузке</li>
+            <li>Проблемы потока сообщений в RabbitMQ</li>
+            <li>OPcache, preloading и JIT</li>
+            <li>Долгоживущий PHP: RoadRunner, Swoole</li>
+          </ul>
+          <p class="source">Продакшен, 2021–2026.</p>
+        </article>
+
+        <article class="card">
+          <h3>Системное программирование</h3>
+          <ul class="list">
+            <li>Процессы, <code>fork()</code>, IPC, разделяемая память</li>
+            <li>Event loop, неблокирующий ввод-вывод, Fibers</li>
+            <li>Долгоживущие воркеры и супервизия</li>
+            <li>Очереди задач: аренда, повторы, dead letters</li>
+            <li>Кеширование, движки хранения, журнал упреждающей записи</li>
+          </ul>
+          <p class="source">Изучено на учебных проектах PHP Systems Lab.</p>
+        </article>
+
+        <article class="card">
+          <h3>Архитектура</h3>
+          <ul class="list">
+            <li>Слоистая, гексагональная и чистая архитектура</li>
+            <li>Модульный монолит и границы сервисов</li>
+            <li>CQRS и событийная архитектура с outbox</li>
+            <li>DDD и ограниченные контексты</li>
+          </ul>
+          <p class="source">CQRS и событийный подход — на работе; сравнение подходов — в Architecture Lab.</p>
+        </article>
+
+        <article class="card">
+          <h3>Инфраструктура</h3>
+          <ul class="list">
+            <li>Docker, Linux, AWS S3</li>
+            <li>RabbitMQ, Redis</li>
+            <li>MySQL, PostgreSQL</li>
+            <li>Elasticsearch, OpenSearch</li>
+            <li>GitLab CI</li>
+            <li>Sentry, Grafana, Loki</li>
+          </ul>
+          <p class="source">Продакшен.</p>
+        </article>
+
+        <article class="card">
+          <h3>Инженерные практики</h3>
+          <ul class="list">
+            <li>Поэтапное обновление PHP и Symfony на живых сервисах</li>
+            <li>Внедрение <code>strict_types</code> в большом монолите</li>
+            <li>Обязательные тесты (PHPUnit, Behat) и проверка кодстайла в CI</li>
+            <li>Локальное Docker-окружение, совпадающее с продом</li>
+            <li>Статический анализ с PHPStan</li>
+          </ul>
+          <p class="source">Продакшен; PHPStan level 8 — в лабораториях.</p>
+        </article>
+
+        <article class="card card-wide">
+          <h3>Разработка с ИИ</h3>
+          <ul class="list">
+            <li>Ежедневная разработка с ИИ-агентами: Claude Code, Codex</li>
+            <li>Инструкции для агентов (<code>AGENTS.md</code>) в большой кодовой базе</li>
+            <li>Автоматическое ИИ-ревью pull request в CI</li>
+            <li>Крупные механические изменения — серией небольших PR, каждый проверен тестами, статическим анализом и ИИ-ревью</li>
+          </ul>
+          <p class="source">Продакшен в systeme.io, 2026.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering labs -->
+  <section class="section" id="labs" aria-labelledby="labs-title">
+    <div class="container">
+      <p class="section-label">Лаборатории</p>
+      <h2 id="labs-title">Собираю механизмы заново и измеряю их</h2>
+      <p class="lead">Личные учебные проекты. Собираю упрощённые версии механизмов, которые хочу понять, и держу их как рабочие шпаргалки для себя. Каждый проект небольшой и запускается — тесты, статический анализ, CI, Docker, — но это учебный материал: он показывает, что я изучал, а не претендует на глубокую экспертизу в каждой теме и не заменяет продакшен-решения.</p>
+
+      <div class="subsection">
+        <h3>PHP Systems Lab</h3>
+        <p>Девять проектов: от памяти и процессов до платформы, которая объединяет их через настоящие границы процессов и сети. <a href="https://github.com/Researcher86/php-systems-lab">Обзорный репозиторий</a>.</p>
+
+        <ol class="stack" reversed>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">09</span><span class="layer-name">php-systems-platform</span><span class="layer-focus">всё вышеперечисленное вместе</span></summary>
+              <div class="layer-body">
+                <p>Интеграционный проект: HTTP, кеш, база данных, поиск, задачи и воркеры из предыдущих проектов работают вместе как одна backend-платформа.</p>
+                <p class="question">Как сбои и обратное давление должны распространяться между компонентами?</p>
+                <ul class="tags"><li>PHP 8.5</li><li>многопроцессность</li><li>событийная модель</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">08</span><span class="layer-name">php-mini-search</span><span class="layer-focus">стемминг · инвертированный индекс · BM25</span></summary>
+              <div class="layer-body">
+                <p>Сервис полнотекстового поиска: нормализация Unicode, стемминг Snowball, инвертированный индекс, ранжирование BM25, append-only журнал и восстановление после сбоя.</p>
+                <p class="question">Что значит «более релевантно», если выразить это числом?</p>
+                <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>инвертированный индекс</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">07</span><span class="layer-name">php-mini-database</span><span class="layer-focus">страницы · B-деревья · SQL · транзакции · WAL</span></summary>
+              <div class="layer-body">
+                <p>Небольшой реляционный движок: страницы и записи, индексы на B-деревьях, парсер и исполнитель SQL, транзакции, журнал упреждающей записи и восстановление после сбоя.</p>
+                <p class="question">Как база данных восстанавливается после сбоя?</p>
+                <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">06</span><span class="layer-name">php-mini-http-server</span><span class="layer-focus">парсинг · маршрутизация · middleware · keep-alive</span></summary>
+              <div class="layer-body">
+                <p>Событийный HTTP-сервер: разбор запросов, маршрутизация, middleware, буферизация ответов и keep-alive.</p>
+                <p class="question">Что происходит, когда клиент медленнее сервера?</p>
+                <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">05</span><span class="layer-name">php-mini-cache</span><span class="layer-focus">RESP · pipelining · TTL · Pub/Sub</span></summary>
+              <div class="layer-body">
+                <p>Событийный in-memory сервер с протоколом RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> с <code>WATCH</code>, снапшоты через дочерний процесс и измерение справедливости event loop.</p>
+                <p class="question">Как один event loop обслуживает много соединений и что будет, если один клиент станет слишком дорогим?</p>
+                <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>неблокирующий I/O</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">04</span><span class="layer-name">php-job-queue</span><span class="layer-focus">аренда · ACK · повторы · dead letters</span></summary>
+              <div class="layer-body">
+                <p>Надёжные фоновые задачи: аренда доставки и fencing, подтверждения, повторы с backoff, отложенные задачи, приоритеты, dead letters и хранение в append-only файле.</p>
+                <p class="question">Что на самом деле значит «надёжная доставка», если воркер упал посреди задачи?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only журнал</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">03</span><span class="layer-name">php-worker-pool</span><span class="layer-focus">master/worker · супервизия · graceful shutdown</span></summary>
+              <div class="layer-body">
+                <p>Постоянный пул master/worker: жизненный цикл и состояния воркеров, супервизия, протокол с префиксом длины и correlation ID, draining, таймауты, backpressure, graceful reload и автомасштабирование.</p>
+                <p class="question">Как пул долгоживущих воркеров остановить, не потеряв запросы в обработке?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix-сокеты</li><li>stream_select</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">02</span><span class="layer-name">php-concurrency</span><span class="layer-focus">процессы · IPC · event loop · Fibers</span></summary>
+              <div class="layer-body">
+                <p>Курс из 38 уроков с запускаемыми экспериментами: процессы, IPC, супервизия, producer/consumer, конвейеры, акторы, work stealing, event loop, Fibers и самописные рантаймы в стиле PHP-FPM, RoadRunner и Messenger.</p>
+                <p class="question">Как работает event loop и какую задачу решают Fibers?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Уроки на русском</span></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">01</span><span class="layer-name">php-memory-lab</span><span class="layer-focus">память · fork · copy-on-write · mmap · FFI</span></summary>
+              <div class="layer-body">
+                <p>Память глазами PHP: RSS, сборка мусора, <code>fork()</code> и copy-on-write, <code>mmap</code>, разделяемая память, кольцевой буфер в разделяемой памяти, FFI и нативная память.</p>
+                <p class="question">Что на самом деле происходит с памятью после <code>fork()</code>?</p>
+                <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>сокеты</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+        </ol>
+
+        <figure class="code">
+          <figcaption>
+            <span>Из <a href="https://github.com/Researcher86/php-mini-cache/blob/master/src/EventLoop/SelectLoop.php">php-mini-cache/src/EventLoop/SelectLoop.php</a> — один проход event loop</span>
+            <span class="code-note">сокращено</span>
+          </figcaption>
+<pre><code><span class="k">public function</span> <span class="f">tick</span>(?<span class="t">float</span> <span class="v">$timeoutSeconds</span>): <span class="t">int</span>
+{
+    <span class="v">$this</span>-&gt;<span class="f">forgetClosedStreams</span>();
+
+    <span class="v">$read</span> = <span class="f">array_map</span>(<span class="k">static fn</span> (<span class="t">array</span> <span class="v">$entry</span>) =&gt; <span class="v">$entry</span>[<span class="n">0</span>], <span class="v">$this</span>-&gt;readListeners);
+    <span class="v">$write</span> = <span class="f">array_map</span>(<span class="k">static fn</span> (<span class="t">array</span> <span class="v">$entry</span>) =&gt; <span class="v">$entry</span>[<span class="n">0</span>], <span class="v">$this</span>-&gt;writeListeners);
+
+    <span class="v">$wait</span> = <span class="v">$this</span>-&gt;<span class="f">shorterWait</span>(<span class="v">$timeoutSeconds</span>, <span class="v">$this</span>-&gt;timers-&gt;<span class="f">nextDueIn</span>(<span class="v">$this</span>-&gt;clock-&gt;<span class="f">now</span>()));
+    <span class="v">$ready</span> = <span class="v">$this</span>-&gt;<span class="f">waitForReadiness</span>(<span class="v">$read</span>, <span class="v">$write</span>, <span class="v">$wait</span>);
+    <span class="v">$this</span>-&gt;timers-&gt;<span class="f">tick</span>(<span class="v">$this</span>-&gt;clock-&gt;<span class="f">now</span>());
+
+    <span class="c">// stream_select() narrows both arrays to whatever became ready.</span>
+    <span class="k">foreach</span> (<span class="v">$read</span> <span class="k">as</span> <span class="v">$stream</span>) {
+        <span class="v">$id</span> = <span class="f">get_resource_id</span>(<span class="v">$stream</span>);
+
+        <span class="c">// An earlier callback in this very loop may have closed this stream.</span>
+        <span class="k">if</span> (<span class="f">is_resource</span>(<span class="v">$stream</span>) &amp;&amp; <span class="f">isset</span>(<span class="v">$this</span>-&gt;readListeners[<span class="v">$id</span>])) {
+            (<span class="v">$this</span>-&gt;readListeners[<span class="v">$id</span>][<span class="n">1</span>])(<span class="v">$stream</span>);
+        }
+    }
+
+    <span class="c">// … the same for writable streams, then busy/idle time metrics.</span>
+
+    <span class="k">return</span> <span class="v">$ready</span>;
+}</code></pre>
+        </figure>
+      </div>
+
+      <div class="subsection">
+        <h3>Архитектура, проектирование систем и алгоритмы</h3>
+        <p>Четыре лаборатории по семь глав. Каждая глава — реализация с тестами, детерминированный эксперимент и бенчмарк; в каждой лаборатории есть сквозной сценарий.</p>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h4 class="mono">architecture-lab</h4>
+            <p>Одна система записи на курсы, построенная семью способами: слоистая, гексагональная, чистая архитектура, модульный монолит, CQRS, событийная с outbox и ограниченные контексты DDD — плюс проверка правил зависимостей.</p>
+            <p class="question">Куда может указывать зависимость и чего стоит граница модуля?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>SQLite</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/architecture-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/architecture-lab">Главы</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">architecture-decision-lab</h4>
+            <p>Один сценарий бронирования поездки при семи решениях: монолит, модульный монолит или сервисы; синхронно или асинхронно; SQL или документы; база на сервис; outbox; сага или двухфазный коммит; согласованность в конечном счёте.</p>
+            <p class="question">Во что обходится распределённая транзакция, когда её нельзя сделать?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>SQLite</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/architecture-decision-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/architecture-decision-lab">Главы</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">system-design-lab</h4>
+            <p>Ограничение частоты запросов, сокращатель ссылок, уведомления, очередь задач, распределённый кеш с консистентным хешированием, доставка вебхуков и шардированный поиск — всё измерено под одной нагрузкой.</p>
+            <p class="question">Что позволяет системе работать под нагрузкой, при сбоях и росте данных?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/system-design-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/system-design-lab">Главы</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">algorithms-lab</h4>
+            <p>Хеш-таблицы и фильтры Блума, кеши LRU/LFU, графы, B-деревья, консистентное хеширование, top-K на потоках и внешняя сортировка — с замерами времени и памяти на реальных данных.</p>
+            <p class="question">Где алгоритм перестаёт быть ответом из учебника?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/algorithms-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/algorithms-lab">Главы</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <p class="section-label">Проекты</p>
+      <h2 id="work-title">Задачи, которые я решал</h2>
+      <p class="lead">Без внутренних названий, деталей бизнеса и конфиденциальных цифр.</p>
+
+      <div class="work-list">
+        <article class="work">
+          <div class="work-head">
+            <h3>Центральный сервис каталога</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Несколько высоконагруженных потребительских продуктов использовали общий каталог, который хранился в центральном сервисе и рассылался в продукты через RabbitMQ.</dd>
+            <dt>Задача</dt>
+            <dd>Сервис ещё не был в продакшене, работал на устаревшем стеке и должен был оставаться поддерживаемым по мере роста функциональности.</dd>
+            <dt>Что сделал</dt>
+            <dd>
+              <ul class="list">
+                <li>Довёл сервис до продакшена и по очереди интегрировал его с продуктами.</li>
+                <li>Перевёл на CQRS и на поддерживаемые версии PHP и Symfony.</li>
+                <li>Добавил журнал всех изменений, массовое редактирование и прогресс асинхронных операций.</li>
+                <li>Перенёс CSV-файлы продуктов из Docker volumes в S3 — деплой перестал зависать.</li>
+                <li>Снизил потребление памяти массовыми командами, добавил тесты и проверку кодстайла в GitLab CI.</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>CQRS</li><li>RabbitMQ</li><li>AWS S3</li><li>GitLab CI</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Производительность и стоимость инфраструктуры</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Продукты работали на арендованных облачных базах, Redis и RabbitMQ, где счёт зависит от нагрузки.</dd>
+            <dt>Задача</dt>
+            <dd>Ошибки в коде приложений повышали нагрузку и стоимость или задерживали обновления между сервисами.</dd>
+            <dt>Что сделал</dt>
+            <dd>
+              <ul class="list">
+                <li>Исправил запрос к каталогу, из-за которого базу пришлось масштабировать вверх; она вернулась к прежнему размеру.</li>
+                <li>Внедрил primary/replica, чтобы мощность базы и счёт следовали за нагрузкой.</li>
+                <li>Помог найти ошибку, из-за которой Redis был загружен на 100%; нагрузка и стоимость вернулись к прежним.</li>
+                <li>Устранил неконтролируемую генерацию сообщений в RabbitMQ, задерживавшую обновления у потребителей, и переделал обработку событий, чтобы падение одного слушателя не роняло остальные.</li>
+                <li>Включил OPcache во всех сервисах и перевёл главную страницу на RoadRunner; preloading и JIT ускорили тесты в 10 раз.</li>
+              </ul>
+            </dd>
+          </dl>
+          <p class="metric"><strong>10×</strong> быстрее тесты после включения preloading и JIT</p>
+          <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Поиск по каталогу</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Задача</dt>
+            <dd>Пользователи ищут по каталогу с главной страницы, часто транслитом или в неверной раскладке клавиатуры.</dd>
+            <dt>Что сделал</dt>
+            <dd>Сделал сквозной поиск с ранжированием по релевантности, транслитерацией и исправлением раскладки. Позже написал отдельный поисковый сервис на Swoole и Elasticsearch/OpenSearch, который ускорил поиск.</dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Swoole</li><li>Elasticsearch</li><li>OpenSearch</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Загрузка данных реестров для XFirm и CheckPerson</h3>
+            <p class="work-meta">Пресс Индекс · 2017–2018</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Два продукта на открытых данных реестров юрлиц и ИП: проверка контрагентов и проверка физических лиц.</dd>
+            <dt>Задача</dt>
+            <dd>Данные реестров приходят архивами XML-документов, которые нужно разобрать, проверить и сделать доступными для поиска.</dd>
+            <dt>Что сделал</dt>
+            <dd>Написал сервис-парсер. Он получал из RabbitMQ сообщение с именем архива, скачивал архив из Hadoop, лениво маппил записи на JAXB-модели, сгенерированные из XSD, обрабатывал ошибочные записи (например, без ИНН) и сохранял результат в JSON в Elassandra (Elasticsearch + Cassandra).</dd>
+          </dl>
+          <ul class="tags"><li>Kotlin</li><li>Java</li><li>Spring Boot</li><li>RabbitMQ</li><li>Hadoop</li><li>Elasticsearch</li><li>Cassandra</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Универсальная электронная очередь</h3>
+            <p class="work-meta">Интегрикс · 2016–2017</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Запись на приём в учреждения через веб и мобильные приложения.</dd>
+            <dt>Задача</dt>
+            <dd>У каждого поставщика электронной очереди свой API — SOAP, REST и другие.</dd>
+            <dt>Что сделал</dt>
+            <dd>Участвовал в разработке REST-сервиса с единым API поверх всех поставщиков. Серверный модуль направляет запрос в плагин из каталога plugins; каждый поставщик — реализация общего интерфейса <code>Plugin</code>, например SOAP-адаптер для SofTrust. Сервис работает и самостоятельно — для организаций без своей системы очереди.</dd>
+          </dl>
+          <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Maven</li><li>Flyway</li><li>PostgreSQL</li><li>PL/pgSQL</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Микросервисы платформы обучения нейросетей</h3>
+            <p class="work-meta">Бэлл Интегратор · 2018</p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Микросервисная система в AWS для обучения нейронных сетей.</dd>
+            <dt>Что сделал</dt>
+            <dd>Работал над двумя сервисами: загрузки обучающих файлов пользователей в Amazon S3 и сервисом пользовательских данных, подписок и покупок.</dd>
+          </dl>
+          <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Spring Cloud</li><li>JPA/Hibernate</li><li>Flyway</li><li>PostgreSQL</li><li>AWS S3</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Система «Антиплагиат»</h3>
+            <p class="work-meta">Костанайский университет · 2014–2016</p>
+          </div>
+          <dl>
+            <dt>Задача</dt>
+            <dd>Проверять дипломные работы на заимствования без покупки коммерческого продукта.</dd>
+            <dt>Что сделал</dt>
+            <dd>Спроектировал и разработал систему: PHP-сервер с полнотекстовым поиском MySQL и алгоритмом шинглов за REST API, веб-интерфейс для быстрой проверки и клиент на Java Swing для пакетной проверки, пополнения базы документов и выгрузки отчётов в Excel.</dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Java Swing</li><li>MySQL</li><li>REST</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>FASM Editor</h3>
+            <p class="work-meta">Open source · <a href="https://github.com/Researcher86/fasm-editor">GitHub</a></p>
+          </div>
+          <dl>
+            <dt>Контекст</dt>
+            <dd>Редактор исходного кода для flat assembler — для себя и сообщества ассемблер-программистов.</dd>
+            <dt>Что сделал</dt>
+            <dd>Синтаксический анализатор, подсветка, автодополнение и генерация списка экспортируемых функций из DLL.</dd>
+          </dl>
+          <ul class="tags"><li>Delphi</li></ul>
+        </article>
+      </div>
+
+      <div class="earlier">
+        <h3>Ранние проекты</h3>
+        <ul class="list">
+          <li>ownRadio — REST-backend музыкального приложения с клиентами для iOS, Android и Windows, которые кешируют музыку для прослушивания без сети (Java, Spring Boot, PostgreSQL).</li>
+          <li>Внутренние системы университета — трекер задач с обновлениями через WebSocket, регистрация корреспонденции, внутрикорпоративный портал (Java, Spring, PHP, MySQL).</li>
+          <li>Интернет-магазин компьютерной техники — <a href="https://github.com/Researcher86/shop">GitHub</a> (Java, Spring MVC, Spring Security, JPA).</li>
+          <li>Онлайн-библиотека — <a href="https://github.com/Researcher86/php-online-library">GitHub</a> (Laravel, Vue, PostgreSQL, Elasticsearch, MongoDB).</li>
+          <li>Учёт продаж автосалона — десктопное приложение (Delphi, MS Access).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <p class="section-label">Опыт</p>
+      <h2 id="experience-title">Карьера</h2>
+
+      <ol class="timeline">
+        <li class="role">
+          <p class="role-period">04.2026 — сейчас</p>
+          <div>
+            <h3>Senior PHP Backend-разработчик <span class="role-company">· <a href="https://systeme.io/">systeme.io</a></span></h3>
+            <p>Высоконагруженная SaaS-платформа для ведения онлайн-бизнеса; клиенты по всему миру, большинство — в Европе и США.</p>
+            <p>Backend CRM (воронки сделок, правила доступа, фильтрация) и сценарии аккаунтов в большом монолите на Symfony; поэтапно внедрил <code>strict_types</code> во всю кодовую базу.</p>
+            <p>Каждый день работаю с ИИ-агентами (Claude Code, Codex), настроил автоматическое Codex-ревью pull request в CI.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">06.2021 — 03.2026</p>
+          <div>
+            <h3>Senior PHP-разработчик <span class="role-company">· Innovation Group, Одесса</span></h3>
+            <p>Несколько высоконагруженных потребительских веб-продуктов с общим сервисом каталога, интегрированных через RabbitMQ.</p>
+            <ul class="list">
+              <li>Довёл центральный сервис каталога до продакшена и перевёл на CQRS.</li>
+              <li>Обновил сервисы на PHP 8.1–8.3 и Symfony 5.4–6.4.</li>
+              <li>Вернул нагрузку и стоимость базы и Redis к прежним, исправив причины.</li>
+              <li>Сделал поиск по каталогу, затем отдельный поисковый сервис на Swoole и OpenSearch.</li>
+              <li>Сделал тесты и проверку кодстайла обязательными в GitLab CI; привёл локальный Docker к продовому.</li>
+            </ul>
+            <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>RabbitMQ</li><li>Redis</li><li>OpenSearch</li><li>Swoole</li><li>RoadRunner</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">01.2021 — 04.2021</p>
+          <div>
+            <h3>Senior PHP-разработчик <span class="role-company">· COMS, Москва</span></h3>
+            <p>Поддержка системы мониторинга сетевого оборудования: поиск, диагностика сбоев и уведомления о них.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>MySQL</li><li>Redis</li><li>RabbitMQ</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">01.2020 — 12.2020</p>
+          <div>
+            <h3>Senior PHP-разработчик <span class="role-company">· NameSilo, США</span></h3>
+            <p>Поддержка системы поиска и регистрации доменных имён.</p>
+            <ul class="tags"><li>PHP</li><li>Yii</li><li>Symfony</li><li>MySQL</li><li>Redis</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">10.2018 — 10.2019</p>
+          <div>
+            <h3>Senior PHP-разработчик <span class="role-company">· Virtual Health, Нью-Йорк</span></h3>
+            <p>Разработка веб-платформы для здравоохранения (NextLevelHealth).</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Yii 2</li><li>MySQL</li><li>Redis</li><li>Elasticsearch</li><li>RabbitMQ</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">04.2018 — 09.2018</p>
+          <div>
+            <h3>Senior Java-разработчик <span class="role-company">· Бэлл Интегратор, Москва</span></h3>
+            <p>Микросервисы платформы обучения нейросетей в AWS.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">09.2017 — 03.2018</p>
+          <div>
+            <h3>Kotlin-разработчик <span class="role-company">· Пресс Индекс, Екатеринбург</span></h3>
+            <p>Системы агрегации данных о юрлицах и ИП.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">10.2016 — 08.2017</p>
+          <div>
+            <h3>Java-разработчик <span class="role-company">· Интегрикс, Волгоград</span></h3>
+            <p>Сервис электронной очереди и backend ownRadio.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">05.2014 — 10.2016</p>
+          <div>
+            <h3>Инженер-программист <span class="role-company">· Костанайский инженерно-экономический университет</span></h3>
+            <p>ПО внутренней автоматизации, в том числе система «Антиплагиат».</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="subsection">
+        <h3>Образование</h3>
+        <ul class="education">
+          <li>Магистр, вычислительная техника и программное обеспечение <span>· Костанайский социально-технический университет · 2010–2012</span></li>
+          <li>Бакалавр, вычислительная техника и программное обеспечение <span>· Костанайский инженерно-педагогический университет · 2007–2010</span></li>
+          <li>Сертификаты ИНТУИТ: «Язык программирования PHP», «Углублённое программирование на Java», «Введение в СУБД MySQL»</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section class="section" id="writing" aria-labelledby="writing-title">
+    <div class="container">
+      <p class="section-label">Тексты</p>
+      <h2 id="writing-title">Книга Engineering Lab</h2>
+      <p class="lead">Мои учебные конспекты, написанные по зафиксированному коду каждой лаборатории.</p>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Engineering Lab</h3>
+          <p>54 главы по пяти лабораториям: PHP Systems Lab (26), Algorithms Lab, Architecture Lab, Architecture Decision Lab и System Design Lab (по 7).</p>
+          <div class="card-links"><a href="https://github.com/Researcher86/engineering-lab-book">Читать на GitHub</a></div>
+        </article>
+        <article class="card">
+          <h3>Курс PHP Concurrency</h3>
+          <p>38 уроков; в каждом — объяснение, ASCII-схема и запускаемый <code>main.php</code>.</p>
+          <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">Читать на GitHub</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <p class="section-label">Контакты</p>
+      <h2 id="contact-title">Связаться со мной</h2>
+
+      <ul class="contact-list">
+        <li><a href="mailto:researcher2286@gmail.com"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>Почта<small>researcher2286@gmail.com</small></span></a></li>
+        <li><a href="https://github.com/Researcher86"><svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg><span>GitHub<small>Researcher86</small></span></a></li>
+        <li><a href="https://www.linkedin.com/in/researcher2286"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg><span>LinkedIn<small>researcher2286</small></span></a></li>
+        <li><a href="https://t.me/researcher2286"><svg aria-hidden="true" focusable="false"><use href="#i-telegram"/></svg><span>Telegram<small>@researcher2286</small></span></a></li>
+      </ul>
+      <p class="location">Костанай, Казахстан.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© Танат Альпенов</span>
+    <a href="https://github.com/Researcher86/researcher86.github.io">Исходный код</a>
+  </div>
+</footer>
+
+</body>
+</html>

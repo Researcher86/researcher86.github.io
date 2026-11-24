@@ -80,4 +80,5 @@ Telegram/LinkedIn (need the deployed URL).
   author's notes and commit history, without internal project names, the business domain,
   ticket links or hiring details.
 - "12+ years" follows the CV dates (commercial work from May 2014).
-- No Russian version for now; it would go in `/ru/` with `hreflang`.
+- Russian version at `/ru/`, linked both ways with `hreflang` and a language switch in the header.
+  It is a translation of the same content and markup, so both pages must be edited together.

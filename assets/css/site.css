@@ -735,3 +735,22 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
   letter-spacing: -0.03em;
   color: var(--accent);
 }
+
+/* Language switch --------------------------------------------------------- */
+.lang-switch {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.lang-switch:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+@media (max-width: 47.99rem) {
+  .lang-switch { margin-left: auto; }
+}
