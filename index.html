@@ -1,984 +1,639 @@
-<!DOCTYPE html>
-<!--[if lt IE 8 ]>
-<html class="no-js ie ie7" lang="ru"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="no-js ie ie8" lang="ru"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="ru"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tanat Alpenov — Senior PHP Backend Engineer</title>
+  <meta name="description" content="Tanat Alpenov, Senior PHP Backend Engineer. Backend architecture, system design and performance; engineering labs that rebuild worker pools, job queues, caches, HTTP servers and a database engine in PHP.">
+  <meta name="author" content="Tanat Alpenov">
+  <link rel="canonical" href="https://researcher86.github.io/">
 
-    <!--- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Альпенов Танат — PHP-разработчик</title>
-    <meta name="description" content="Альпенов Танат, ведущий PHP-разработчик: Symfony, микросервисы, REST API, MySQL, Redis, RabbitMQ.">
-    <meta name="author" content="Альпенов Танат">
-    <meta property="og:title" content="Альпенов Танат — PHP-разработчик">
-    <meta property="og:description" content="Ведущий PHP-разработчик: Symfony, микросервисы, REST API.">
-    <meta property="og:image" content="https://researcher86.github.io/images/my.jpg">
-    <meta property="og:url" content="https://researcher86.github.io/">
-    <meta property="og:type" content="profile">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://researcher86.github.io/">
+  <meta property="og:title" content="Tanat Alpenov — Senior PHP Backend Engineer">
+  <meta property="og:description" content="Backend architecture, system design and performance. Engineering labs on PHP processes, concurrency, queues, caches, databases and search.">
+  <meta property="og:image" content="https://researcher86.github.io/assets/images/tanat.jpg">
+  <meta property="profile:first_name" content="Tanat">
+  <meta property="profile:last_name" content="Alpenov">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tanat Alpenov — Senior PHP Backend Engineer">
+  <meta name="twitter:description" content="Backend architecture, system design and performance. Engineering labs on PHP internals and distributed systems.">
+  <meta name="twitter:image" content="https://researcher86.github.io/assets/images/tanat.jpg">
 
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfbfc" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
 
-    <!-- Script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Favicons
-     ================================================== -->
-    <link rel="shortcut icon" href="favicon.png">
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tanat Alpenov",
+    "jobTitle": "Senior PHP Backend Engineer",
+    "worksFor": { "@type": "Organization", "name": "systeme.io", "url": "https://systeme.io/" },
+    "url": "https://researcher86.github.io/",
+    "image": "https://researcher86.github.io/assets/images/tanat.jpg",
+    "email": "mailto:researcher2286@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kostanay", "addressCountry": "KZ" },
+    "sameAs": [
+      "https://github.com/Researcher86",
+      "https://www.linkedin.com/in/researcher2286",
+      "https://t.me/researcher2286"
+    ],
+    "knowsAbout": ["PHP", "Symfony", "Backend architecture", "System design", "Concurrency", "Distributed systems"]
+  }
+  </script>
 </head>
-
 <body>
 
-<!-- Header
-================================================== -->
-<header id="home">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.6 7.6 0 0 0-4 0c-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A8 8 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.94 3.3 18.6 19.05c-.25 1.1-.9 1.38-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.16 9.38-8.47c.41-.36-.09-.57-.63-.21L5.77 12.5.78 10.94c-1.08-.34-1.1-1.08.23-1.6L20.5 1.83c.9-.33 1.69.21 1.44 1.47Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></symbol>
+</svg>
 
-    <nav id="nav-wrap">
+<a class="skip-link" href="#main">Skip to content</a>
 
-        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">tanat.alpenov</a>
+    <nav class="site-nav" aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#labs">Labs</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch theme">
+      <svg class="icon-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+      <svg class="icon-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+    </button>
+  </div>
+</header>
 
-        <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Главная</a></li>
-            <li><a class="smoothscroll" href="#about">Обо мне</a></li>
-            <li><a class="smoothscroll" href="#resume">Резюме</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Портфолио</a></li>
-        </ul> <!-- end #nav -->
+<main id="main">
 
-    </nav> <!-- end #nav-wrap -->
-
-    <div class="row banner">
-        <div class="banner-text">
-            <h1 class="responsive-headline">Альпенов Танат</h1>
-            <h3>Занимаюсь разработкой корпоративных систем на <span class="select">PHP</span>.
-                <br/>
-                <a class="smoothscroll" href="#about">Обо мне</a>.</h3>
-            <hr/>
-            <ul class="social">
-                <li><a target="_blank" href="https://github.com/Researcher86"><i class="fa fa-github"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
-                <li><a target="_blank" href="https://t.me/researcher2286"><i class="fa fa-telegram"></i></a></li>
-            </ul>
-        </div>
+  <!-- Hero -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="hero-name">Tanat Alpenov</p>
+      <h1 id="hero-title">Senior PHP Backend Engineer</h1>
+      <p class="hero-tagline">Building reliable backend systems, exploring system architecture, and engineering for performance.</p>
+      <p class="hero-intro">12+ years of commercial software development. Focused on backend engineering, system design, performance optimization, and understanding the internals of software systems.</p>
+      <div class="actions">
+        <a class="button button-primary" href="#labs">View Engineering Labs</a>
+        <a class="button" href="https://github.com/Researcher86">
+          <svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub
+        </a>
+        <a class="button" href="#contact">Contact</a>
+      </div>
     </div>
+  </section>
 
-    <p class="scrolldown">
-        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-    </p>
-
-</header> <!-- Header End -->
-
-
-<!-- About Section
-================================================== -->
-<section id="about">
-
-    <div class="row">
-
-        <div class="three columns">
-
-            <img class="profile-pic" src="images/my.jpg" alt="Альпенов Танат"/>
-
+  <!-- About -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <p class="section-label">About</p>
+      <h2 id="about-title">A backend engineer who wants to know how it works underneath</h2>
+      <div class="about">
+        <img class="about-photo" src="assets/images/tanat.jpg" width="480" height="480" alt="Portrait of Tanat Alpenov" loading="lazy">
+        <div class="prose">
+          <p>I started programming in 2007 and have worked professionally since 2014. My first job was at a university, where I built its internal software: an anti-plagiarism system in PHP and Java, a document registry and a task tracker. I also wrote desktop applications in Delphi, including FASM Editor.</p>
+          <p>From 2016 to 2018 I worked on Java and Kotlin backends: a plugin-based REST service over third-party queue systems, a RabbitMQ-driven ingestion service for company registry data, and Spring Boot microservices on AWS. Since 2018 my work has been mainly PHP and Symfony: products in healthcare, domain registration and network monitoring, then five years on a group of high-traffic consumer products, and now a SaaS platform for online businesses.</p>
+          <p>Outside of work I build small, measured implementations of the mechanisms backend systems depend on — worker pools, job queues, an event-driven cache server, an HTTP server, a database engine with a write-ahead log — to see where their guarantees come from. I prefer hands-on engineering to people management.</p>
         </div>
-
-        <div class="nine columns main-col">
-
-            <h2>Обо мне</h2>
-
-            <p>
-                Занимаюсь разработкой корпоративных систем на <span class="select">PHP</span>.
-                <span class="select">Цель</span> - найти интересную и перспективную работу веб-разработчика с возможностью применения и совершенствования моих знаний и умений.
-            </p>
-            <p>
-                <span class="select">Процесс.</span> Разрабатываю системы монолит/микросервисы с предоставлением <span class="select">REST API</span>,
-                пользуюсь шаблонами проектирования, использую принципы <span class="select">SOLID</span>,
-                код храню в <span class="select">Git</span>,
-                для хранения данных приложения использую <span class="select">SQL</span> и <span class="select">NoSQL</span> решения.
-            </p>
-            <p>
-                <span class="select">Опыт.</span> Занимаюсь программированием <span class="select">20+</span> лет из них <span class="select">10+</span> года профессионально.
-            </p>
-
-            <div class="row">
-
-                <div class="columns contact-details">
-
-                    <h2>Контакты</h2>
-                    <p class="address">
-                        <span>Альпенов Танат</span><br>
-                        <span>Казахстан, Костанай</span><br>
-                        <a href="mailto:researcher2286@gmail.com">researcher2286@gmail.com</a>
-                    </p>
-
-                </div>
-
-            </div> <!-- end row -->
-
-        </div> <!-- end .main-col -->
-
+      </div>
     </div>
-
-</section> <!-- About Section End-->
-
-
-<!-- Resume Section
-================================================== -->
-<section id="resume">
-    <!-- Work
-    ----------------------------------------------- -->
-    <div class="row work">
-
-        <div class="three columns header-col">
-            <h1><span>Опыт работы</span></h1>
-        </div>
-
-        <div class="nine columns main-col">
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Одесса, Innovation Group</h3>
-                    <p class="info">Ведущий PHP-разработчик <span>&bull;</span> <em class="date">06.2021 - 03.2026</em>
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Москва, COMS</h3>
-                    <p class="info">Ведущий PHP-разработчик <span>&bull;</span> <em class="date">01.2021 - 04.2021</em>
-                    </p>
-                    <p>
-                        Поддержка системы мониторинга сетевого оборудования.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>США, NameSilo</h3>
-                    <p class="info">Ведущий PHP-разработчик <span>&bull;</span> <em class="date">01.2020 - 12.2020</em>
-                    </p>
-                    <p>
-                        Поддержка системы регистрации доменных имен.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Нью-Йорк, Virtual Health</h3>
-                    <p class="info">Ведущий PHP-разработчик <span>&bull;</span> <em class="date">10.2018 - 10.2019</em>
-                    </p>
-                    <p>
-                        Разработка корпоративных решений для здравоохранения.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Москва, ООО "Бэлл Интегратор"</h3>
-                    <p class="info">Ведущий Java-разработчик <span>&bull;</span> <em class="date">04.2018 - 09.2018</em>
-                    </p>
-                    <p>
-                        Разработка системы тренировки нейронных сетей.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Екатеринбург, ООО "Пресс Индекс"</h3>
-                    <p class="info">Kotlin-разработчик <span>&bull;</span> <em class="date">09.2017 - 03.2018</em></p>
-                    <p>
-                        Разработка систем агрегации пользовательских данных ЮЛ и ИП.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Волгоград, ООО "Интегрикс"</h3>
-                    <p class="info">Java-разработчик <span>&bull;</span> <em class="date">10.2016 - 08.2017</em></p>
-                    <p>
-                        Разработка системы электронной очереди.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Костанайский инженерно-экономический университет</h3>
-                    <p class="info">Инженер-программист <span>&bull;</span> <em class="date">05.2014 - 10.2016</em></p>
-                    <p>
-                        Разработка ПО внутренней автоматизации предприятия.
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Work -->
-
-    <div class="row work">
-
-        <div class="three columns header-col">
-            <h1><span>Достижения</span></h1>
-        </div>
-
-        <div class="nine columns main-col">
-
-            <div class="row item">
-                <ul class="disc">
-                    <li>Разработал бесплатную программу "FASM Editor" для себя и сообщества ассемблер программистов. Программу можно бесплатно скачать с сайта
-                        <a target="_blank" href="https://github.com/Researcher86/fasm-editor">Ссылка</a></li>
-                    <li>Разработал информационную систему "Антиплагиат", тем самым университет КИнЭУ сэкономил денежные средства на приобретение аналогичной программы</li>
-                    <li>
-                        <img style="display: block;" src="https://www.codewars.com/users/Researcher86/badges/large?theme=light" alt="Codewars"/>
-                    </li>
-                </ul>
-
-            </div> <!-- item end -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Work -->
-
-
-    <!-- Skills
-    ----------------------------------------------- -->
-    <div class="row skill">
-
-        <div class="three columns header-col">
-            <h1><span>Навыки и знания</span></h1>
-        </div>
-
-        <div class="nine columns main-col">
-
-            <ul class="disc">
-                <li>Умение проектировать ИС, объектные модели, реляционные базы данных</li>
-                <li>Применение принципов, стилей и паттернов (SOLID, REST, GRASP, GoF)</li>
-                <li>Применение CQRS + Event Driven</li>
-                <li>PHP 8+, Symfony Framework</li>
-                <li>RoadRunner, Swoole</li>
-                <li>JavaScript</li>
-                <li>MySQL, Redis, ElasticSearch</li>
-                <li>RabbitMQ</li>
-                <li>Linux, Docker, Git</li>
-            </ul>
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End skills -->
-
-
-    <!-- Education
-    ----------------------------------------------- -->
-    <div class="row education">
-
-        <div class="three columns header-col">
-            <h1><span>Образование</span></h1>
-        </div>
-
-        <div class="nine columns main-col">
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Костанайский социально-технический университет</h3>
-                    <p class="info">Магистр, Вычислительная техника и программное обеспечение <span>&bull;</span> <em class="date">2010 - 2012</em></p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-                <div class="twelve columns">
-
-                    <h3>Костанайский инженерно-педагогический университет </h3>
-                    <p class="info">Бакалавр, Вычислительная техника и программное обеспечение <span>&bull;</span> <em class="date">2007 - 2010</em>
-                    </p>
-
-                </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-                <div class="twelve columns">
-                    <a target="_blank" href="https://intuit.ru/verifydiplomas/100781854">
-                        <img src="images/portfolio/certificates/INTUIT-5.jpg" alt="Язык программирования PHP">
-                    </a>
-                </div>
-            </div> <!-- item end -->
-
-            <div class="row item">
-                <div class="twelve columns">
-                    <a target="_blank" href="https://intuit.ru/verifydiplomas/100781757">
-                        <img src="images/portfolio/certificates/INTUIT-4.jpg" alt="Углубленное программирование на Java">
-                    </a>
-                </div>
-            </div> <!-- item end -->
-
-            <div class="row item">
-                <div class="twelve columns">
-                    <a target="_blank" href="https://intuit.ru/verifydiplomas/100825887">
-                        <img src="images/portfolio/certificates/INTUIT-1.jpg" alt="Введение в СУБД MySQL">
-                    </a>
-                </div>
-            </div> <!-- item end -->
-
-        </div> <!-- main-col end -->
-
-    </div> <!-- End Education -->
-</section> <!-- Resume Section End-->
-
-
-<!-- Portfolio Section
-================================================== -->
-<section id="portfolio">
-
-    <div class="row">
-
-        <div class="twelve columns collapsed">
-
-            <h1>Посмотрите мои работы.</h1>
-
-            <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-20" title="">
-                            <img alt="COMS" src="images/portfolio/c-view/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>COMS</h5>
-                                    <p>PHP, Symfony, MySQL, Redis, RabbitMQ, Docker</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-19" title="">
-                            <img alt="NameSilo" src="images/portfolio/namesilo/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>NameSilo</h5>
-                                    <p>PHP, Yii, Symfony, MySQL, Redis, Docker</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-18" title="">
-                            <img alt="Online Library" src="images/portfolio/online-library/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Online Library</h5>
-                                    <p>PHP, Laravel, Node, Vue, Bootstrap, PostgreSQL, Redis, ElasticSearch, MongoDB, Docker</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-09" title="">
-                            <img alt="NextLevelHealth" src="images/portfolio/vh/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>NextLevelHealth</h5>
-                                    <p>PHP, Symfony, Yii 2, Js, MySQL, Redis, ElasticSearch, RabbitMQ</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-17" title="">
-                            <img alt="BellOne" src="images/portfolio/bellone/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>BellOne</h5>
-                                    <p>Java, JUnit, Spring Boot, JPA/Hibernate, Flyway, Maven, PostgreSQL</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-16" title="">
-                            <img alt="XFirm, CheckPerson" src="images/portfolio/xfirm/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>XFirm, CheckPerson</h5>
-                                    <p>Java/Kotlin, JUnit, Spring Boot, Maven, RabbitMQ, Elasticsearch, Cassandra</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-14" title="">
-                            <img alt="Электронная очередь" src="images/portfolio/electronic-queue/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Электронная очередь</h5>
-                                    <p>Java, Spring Boot, Maven, JUnit, Hibernate, Flyway, PostgreSQL (PL/pgSQL)</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-13" title="">
-                            <img alt="OwnRadio" src="images/portfolio/own-radio/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>OwnRadio</h5>
-                                    <p>Java, Spring Boot, Maven, JUnit, Hibernate, PostgreSQL (PL/pgSQL)</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-12" title="">
-                            <img alt="ToDoList" src="images/portfolio/todolist/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>ToDoList</h5>
-                                    <p>Java, Spring framework, JPA/Hibernate, Maven, MySQL, WebSocket, Twitter Bootstrap, JQuery</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-10" title="">
-                            <img alt="Интернет-магазин" src="images/portfolio/shop/1.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Интернет-магазин</h5>
-                                    <p>Java, Spring framework, JPA/Hibernate, Maven, MySQL, Twitter Bootstrap, JQuery</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-08" title="">
-                            <img alt="Регистрации входящей и исходящей корреспонденции" src="images/portfolio/in-out-msg/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Регистрации входящей и исходящей корреспонденции</h5>
-                                    <p>Java, Spring framework, JPA/Hibernate, Maven, MySQL, Twitter Bootstrap, JQuery</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-07" title="">
-                            <img alt="Антиплагиат" src="images/portfolio/antiplagiat/2.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Антиплагиат</h5>
-                                    <p>Java, PHP, MySQL</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-06" title="">
-                            <img alt="Веб-портал" src="images/portfolio/web-portal/2.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Веб-портал</h5>
-                                    <p>PHP, MySQL, JavaScript, Bootstrap, JQuery, CKEditor, ЧПУ</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-02" title="">
-                            <img alt="FASM Editor" src="images/portfolio/fasm-editor/1.png">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>FASM Editor</h5>
-                                    <p>Delphi</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-01" title="">
-                            <img alt="Автосалон" src="images/portfolio/auto/2.webp">
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Автосалон</h5>
-                                    <p>Delphi</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-            </div> <!-- portfolio-wrapper end -->
-
-        </div> <!-- twelve columns end -->
-
-
-        <!-- Modal Popup
-         --------------------------------------------------------------- -->
-
-        <div id="modal-01" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/auto/2.webp" alt="Автосалон"/>
-
-            <div class="description-box">
-                <h4>Автосалон</h4>
-                <p>
-                    АИС учета продаж транспортных средств.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Delphi, SQL, ADO, MS Access</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/auto.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-01 End -->
-
-        <div id="modal-02" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/fasm-editor/1.png" alt="FASM Editor"/>
-
-            <div class="description-box">
-                <h4>FASM Editor</h4>
-                <p>
-                    Редактор исходного кода.
-                    <a target="_blank" href="https://github.com/Researcher86/fasm-editor">Ссылка</a>.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Delphi</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/fasm-editor.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-02 End -->
-
-        <div id="modal-06" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/web-portal/2.png" alt="Веб-портал"/>
-
-            <div class="description-box">
-                <h4>Веб-портал</h4>
-                <p>
-                    Внутрикорпоративная система.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>PHP, MySQL, JavaScript, Bootstrap, JQuery, CKEditor, ЧПУ</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/web-portal.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-06 End -->
-
-        <div id="modal-07" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/antiplagiat/2.png" alt="Антиплагиат"/>
-
-            <div class="description-box">
-                <h4>Антиплагиат</h4>
-                <p>
-                    Система поиска наличия заимствования текста в дипломных работах.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, PHP, MySQL</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/antiplagiat.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-07 End -->
-
-        <div id="modal-08" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/in-out-msg/1.png" alt="Регистрации входящей и исходящей корреспонденции"/>
-
-            <div class="description-box">
-                <h4>Регистрации входящей и исходящей корреспонденции</h4>
-                <p>
-                    Система регистрации входящей, исходящей корреспонденции в отделе кадров.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, Spring framework, JPA/Hibernate, Maven, MySQL, Twitter Bootstrap, JQuery</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/in-out-msg.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-08 End -->
-
-        <div id="modal-09" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/vh/1.png" alt="NextLevelHealth"/>
-
-            <div class="description-box">
-                <h4>NextLevelHealth</h4>
-                <p>
-                    Веб портал для здравоохранения.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>PHP, Symfony, Yii 2, Js, MySQL, Redis, ElasticSearch, RabbitMQ</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/vh.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-09 End -->
-
-        <div id="modal-10" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/shop/1.webp" alt="Интернет-магазин"/>
-
-            <div class="description-box">
-                <h4>Интернет-магазин</h4>
-                <p>
-                    Интернет-магазин по продаже компьютерной техники. <a target="_blank" href="https://github.com/Researcher86/shop">GitHub</a>
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, Spring framework, JPA/Hibernate, Maven, MySQL, Twitter Bootstrap, JQuery</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/shop.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-10 End -->
-
-        <div id="modal-12" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/todolist/1.png" alt="ToDoList"/>
-
-            <div class="description-box">
-                <h4>ToDoList</h4>
-                <p>
-                    Система автоматизации списка задач отдела.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, Spring framework, JPA/Hibernate, Maven, MySQL, WebSocket, Twitter Bootstrap, JQuery</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/todolist.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-12 End -->
-
-        <div id="modal-13" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/own-radio/1.webp" alt="OwnRadio"/>
-
-            <div class="description-box">
-                <h4>OwnRadio</h4>
-                <p>
-                    Онлайн радио.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, Spring Boot, Maven, JUnit, Hibernate, PostgreSQL (PL/pgSQL)</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/own-radio.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-13 End -->
-
-        <div id="modal-14" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/electronic-queue/1.png" alt="Электронная очередь"/>
-
-            <div class="description-box">
-                <h4>Электронная очередь</h4>
-                <p>
-                    Универсальная электронная очередь, позволяет пользователям записываться во все учреждения посредством веба, мобильного приложения.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, Spring Boot, Maven, JUnit, Hibernate, Flyway, PostgreSQL (PL/pgSQL)</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/electronic-queue.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-14 End -->
-
-        <div id="modal-16" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/xfirm/1.webp" alt="XFirm, CheckPerson"/>
-
-            <div class="description-box">
-                <h4>XFirm, CheckPerson</h4>
-                <p>
-                    Системы агрегации пользовательских данных ЮЛ и ИП.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java/Kotlin, JUnit, Spring Boot, Maven, RabbitMQ, Elasticsearch, Cassandra</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/xfirm.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-16 End -->
-
-        <div id="modal-17" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/bellone/1.webp" alt="BellOne"/>
-
-            <div class="description-box">
-                <h4>BellOne</h4>
-                <p>
-                    Система тренировки нейронных сетей.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>Java, JUnit, Spring Boot, JPA/Hibernate, Flyway, Maven, PostgreSQL</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/bellone.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-17 End -->
-
-        <div id="modal-18" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/online-library/1.webp" alt="Online Library"/>
-
-            <div class="description-box">
-                <h4>Online Library</h4>
-                <p>
-                    Онлайн библиотека предназначена для поиска и просмотра книг по различным жанрам.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>PHP, Laravel, Node, Vue, Bootstrap, PostgreSQL, Redis, ElasticSearch, MongoDB, Docker</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/online-library.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-18 End -->
-
-        <div id="modal-19" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/namesilo/2.png" alt="NameSilo"/>
-
-            <div class="description-box">
-                <h4>NameSilo</h4>
-                <p>
-                    Система регистрации доменных имен.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>PHP, Yii, Symfony, MySQL, Redis, Docker</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/namesilo.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-19 End -->
-
-        <div id="modal-20" class="popup-modal mfp-hide">
-
-            <img class="scale-with-grid" src="images/portfolio/c-view/1.png" alt="COMS"/>
-
-            <div class="description-box">
-                <h4>COMS</h4>
-                <p>
-                    Cистема мониторинга сетевого оборудования.
-                </p>
-                <span class="categories"><i class="fa fa-tag"></i>PHP, Symfony, MySQL, Redis, RabbitMQ, Docker</span>
-            </div>
-
-            <div class="link-box">
-                <a href="portfolio-pages/c-view.html">Подробнее</a>
-                <a class="popup-modal-dismiss">Закрыть</a>
-            </div>
-
-        </div><!-- modal-20 End -->
-
-    </div> <!-- row End -->
-
-</section> <!-- Portfolio Section End-->
-
-
-<!-- footer
-================================================== -->
-<footer>
-
-    <div class="row">
-
-        <div class="twelve columns">
-
-            <ul class="social-links">
-                <li><a target="_blank" href="https://github.com/Researcher86"><i class="fa fa-github"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/researcher2286"><i class="fa fa-linkedin"></i></a></li>
-                <li><a target="_blank" href="https://t.me/researcher2286"><i class="fa fa-telegram"></i></a></li>
-            </ul>
-
-        </div>
-
-        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-
+  </section>
+
+  <!-- Engineering focus -->
+  <section class="section" id="focus" aria-labelledby="focus-title">
+    <div class="container">
+      <p class="section-label">Engineering focus</p>
+      <h2 id="focus-title">Where I work and what I study</h2>
+      <p class="lead">Areas of production experience and of ongoing study. The note under each card says where the experience comes from.</p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Backend engineering</h3>
+          <ul class="list">
+            <li>PHP 8, Symfony; earlier Yii and Laravel</li>
+            <li>Java and Kotlin with Spring Boot (2016–2018)</li>
+            <li>REST API design and integration with third-party systems</li>
+            <li>MySQL and PostgreSQL schema design</li>
+          </ul>
+          <p class="source">Production work since 2014.</p>
+        </article>
+
+        <article class="card">
+          <h3>Performance</h3>
+          <ul class="list">
+            <li>Finding the query or bug behind database and Redis load</li>
+            <li>Primary/replica databases that scale with load</li>
+            <li>Message flow problems in RabbitMQ</li>
+            <li>OPcache, preloading and JIT</li>
+            <li>Long-running PHP: RoadRunner, Swoole</li>
+          </ul>
+          <p class="source">Production work, 2021–2026.</p>
+        </article>
+
+        <article class="card">
+          <h3>Systems engineering</h3>
+          <ul class="list">
+            <li>Processes, <code>fork()</code>, IPC, shared memory</li>
+            <li>Event loops, non-blocking I/O, Fibers</li>
+            <li>Long-lived workers and supervision</li>
+            <li>Job queues: leases, retries, dead letters</li>
+            <li>Caching, storage engines, write-ahead logging</li>
+          </ul>
+          <p class="source">Studied in depth in PHP Systems Lab.</p>
+        </article>
+
+        <article class="card">
+          <h3>Architecture</h3>
+          <ul class="list">
+            <li>Layered, hexagonal and clean architecture</li>
+            <li>Modular monolith and service boundaries</li>
+            <li>CQRS and event-driven design with an outbox</li>
+            <li>Domain-driven design and bounded contexts</li>
+          </ul>
+          <p class="source">CQRS and event-driven design applied at work; compared side by side in Architecture Lab.</p>
+        </article>
+
+        <article class="card">
+          <h3>Infrastructure</h3>
+          <ul class="list">
+            <li>Docker, Linux, AWS S3</li>
+            <li>RabbitMQ, Redis</li>
+            <li>MySQL, PostgreSQL</li>
+            <li>Elasticsearch, OpenSearch</li>
+            <li>GitLab CI</li>
+            <li>Sentry, Grafana, Loki</li>
+          </ul>
+          <p class="source">Production work.</p>
+        </article>
+
+        <article class="card">
+          <h3>Engineering practices</h3>
+          <ul class="list">
+            <li>Step-by-step PHP and Symfony upgrades of live services</li>
+            <li>Rolling out <code>strict_types</code> across a large monolith</li>
+            <li>Tests (PHPUnit, Behat) and code-style checks required in CI</li>
+            <li>Local Docker environment matching production</li>
+            <li>Static analysis with PHPStan</li>
+          </ul>
+          <p class="source">Production work; PHPStan level 8 in the labs.</p>
+        </article>
+      </div>
     </div>
+  </section>
 
-</footer> <!-- Footer End-->
+  <!-- Engineering labs -->
+  <section class="section" id="labs" aria-labelledby="labs-title">
+    <div class="container">
+      <p class="section-label">Engineering labs</p>
+      <h2 id="labs-title">Rebuilding the mechanisms, then measuring them</h2>
+      <p class="lead">Independent research repositories. Each one is a small, readable implementation of a real mechanism, with tests, static analysis, CI, and a Docker environment so it runs the same everywhere. They are educational models, not production replacements.</p>
 
-<!-- Java Script
-================================================== -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+      <div class="subsection">
+        <h3>PHP Systems Lab</h3>
+        <p>Nine projects, from memory and processes up to a platform that joins them over real process and network boundaries. <a href="https://github.com/Researcher86/php-systems-lab">Overview repository</a>.</p>
 
-<script src="js/waypoints.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/magnific-popup.js"></script>
-<script src="js/init.js"></script>
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="card-index">01</span>
+            <h4 class="mono">php-memory-lab</h4>
+            <p>Memory from PHP's side: RSS, garbage collection, <code>fork()</code> and copy-on-write, <code>mmap</code>, shared memory, a shared-memory ring buffer, FFI and native memory.</p>
+            <p class="question">What actually happens to memory after <code>fork()</code>?</p>
+            <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>sockets</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">02</span>
+            <h4 class="mono">php-concurrency</h4>
+            <p>A 38-lesson course of runnable experiments: processes, IPC, supervision, producer/consumer, pipelines, actors, work stealing, event loops, Fibers, and hand-built PHP-FPM-, RoadRunner- and Messenger-style runtimes.</p>
+            <p class="question">How do event loops work, and what problem do Fibers solve?</p>
+            <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Lessons in Russian</span></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">03</span>
+            <h4 class="mono">php-worker-pool</h4>
+            <p>A persistent master/worker pool: worker lifecycle and states, supervision, a length-prefixed protocol with correlation IDs, draining, timeouts, backpressure, graceful reload and autoscaling.</p>
+            <p class="question">How can a pool of long-lived workers shut down without dropping requests in flight?</p>
+            <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix sockets</li><li>stream_select</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">04</span>
+            <h4 class="mono">php-job-queue</h4>
+            <p>Reliable background jobs: delivery leases and fencing, acknowledgements, retries with backoff, delayed jobs, priorities, dead letters, and append-only file persistence.</p>
+            <p class="question">What does “reliable delivery” actually mean when a worker crashes mid-job?</p>
+            <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only log</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">05</span>
+            <h4 class="mono">php-mini-cache</h4>
+            <p>An event-driven in-memory server speaking RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> with <code>WATCH</code>, snapshots through a forked child, and measured event-loop fairness.</p>
+            <p class="question">How does one event loop serve many connections, and what happens when one client becomes too expensive?</p>
+            <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>non-blocking I/O</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">06</span>
+            <h4 class="mono">php-mini-http-server</h4>
+            <p>An event-driven HTTP server: request parsing, routing, middleware, response buffering and keep-alive.</p>
+            <p class="question">What happens when a client is slower than the server?</p>
+            <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">07</span>
+            <h4 class="mono">php-mini-database</h4>
+            <p>A small relational engine: pages and records, B-tree indexes, a SQL parser and executor, transactions, a write-ahead log and crash recovery.</p>
+            <p class="question">How can a database recover after a crash?</p>
+            <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">08</span>
+            <h4 class="mono">php-mini-search</h4>
+            <p>A full-text search service: Unicode normalization, Snowball stemming, an inverted index, BM25 ranking, an append-only log and crash recovery.</p>
+            <p class="question">What does “more relevant” mean, as a number?</p>
+            <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>inverted index</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
+          </article>
+
+          <article class="card">
+            <span class="card-index">09</span>
+            <h4 class="mono">php-systems-platform</h4>
+            <p>The integration project: HTTP, cache, database, search, jobs and workers from the previous projects running together as one backend platform.</p>
+            <p class="question">How should failures and backpressure move between components?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>multi-process</li><li>event-driven</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Architecture, system design and algorithms</h3>
+        <p>Four labs with seven chapters each. Every chapter is an implementation with tests, a deterministic experiment and a benchmark; each lab runs one end-to-end scenario.</p>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h4 class="mono">architecture-lab</h4>
+            <p>One course-enrollment system built seven ways: layered, hexagonal, clean architecture, modular monolith, CQRS, event-driven with an outbox, and DDD bounded contexts — plus a dependency-rule checker.</p>
+            <p class="question">Where is a dependency allowed to point, and what does a module boundary cost?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>SQLite</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/architecture-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/architecture-lab">Chapters (RU)</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">architecture-decision-lab</h4>
+            <p>One trip-booking flow under seven decisions: monolith vs modular monolith vs services, sync vs async, SQL vs documents, database per service, outbox, saga vs two-phase commit, eventual consistency.</p>
+            <p class="question">What does a distributed transaction cost when you can't have one?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>SQLite</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/architecture-decision-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/architecture-decision-lab">Chapters (RU)</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">system-design-lab</h4>
+            <p>Rate limiting, a URL shortener, notifications, a job queue, a distributed cache with consistent hashing, webhook delivery and sharded search — each measured under the same workload.</p>
+            <p class="question">What keeps a system working under load, failures and data growth?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/system-design-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/system-design-lab">Chapters (RU)</a></div>
+          </article>
+
+          <article class="card">
+            <h4 class="mono">algorithms-lab</h4>
+            <p>Hash tables and Bloom filters, LRU/LFU caches, graphs, B-trees, consistent hashing, top-K over streams and external sorting — measured for time and memory on real data.</p>
+            <p class="question">Where does an algorithm stop being a textbook answer?</p>
+            <ul class="tags"><li>PHP 8.5</li><li>PHPStan level 8</li></ul>
+            <div class="card-links"><a href="https://github.com/Researcher86/algorithms-lab">GitHub</a><a href="https://github.com/Researcher86/engineering-lab-book/tree/master/algorithms-lab">Chapters (RU)</a></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <p class="section-label">Selected work</p>
+      <h2 id="work-title">Problems I worked on</h2>
+      <p class="lead">Described without internal names, business details or confidential figures.</p>
+
+      <div class="work-list">
+        <article class="work">
+          <div class="work-head">
+            <h3>Central catalog service</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>Several high-traffic consumer products shared one catalog, kept in a central service and distributed to the products over RabbitMQ.</dd>
+            <dt>Problem</dt>
+            <dd>The service had not reached production, ran on an outdated stack, and had to stay maintainable while features were added.</dd>
+            <dt>Contribution</dt>
+            <dd>
+              <ul class="list">
+                <li>Took the service to production and integrated it with the products one by one.</li>
+                <li>Moved it to CQRS and upgraded it to a supported PHP and Symfony stack.</li>
+                <li>Added a log of every change, bulk editing, and progress reporting for asynchronous operations.</li>
+                <li>Moved per-product CSV files from Docker volumes to S3, which stopped deployments from hanging.</li>
+                <li>Reduced the memory use of bulk commands, and added tests and code-style checks to GitLab CI.</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>CQRS</li><li>RabbitMQ</li><li>AWS S3</li><li>GitLab CI</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Performance and infrastructure cost</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>The products ran on rented cloud databases, Redis and RabbitMQ, where load sets the bill.</dd>
+            <dt>Problem</dt>
+            <dd>Defects in application code raised load and cost, or delayed updates between services.</dd>
+            <dt>Contribution</dt>
+            <dd>
+              <ul class="list">
+                <li>Fixed a catalog query that had forced the database to scale up; it returned to its previous size.</li>
+                <li>Introduced primary/replica databases so capacity, and the bill, follow the load.</li>
+                <li>Helped find the bug that kept Redis at 100% load; it returned to its previous level and cost.</li>
+                <li>Fixed uncontrolled message generation in RabbitMQ that delayed updates to consumers, and reworked event handling so one failing listener no longer brings down the rest.</li>
+                <li>Enabled OPcache across services and moved a homepage to RoadRunner; preloading and JIT made the test suite 10× faster.</li>
+              </ul>
+            </dd>
+          </dl>
+          <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Catalog search</h3>
+            <p class="work-meta">Innovation Group · 2021–2026</p>
+          </div>
+          <dl>
+            <dt>Problem</dt>
+            <dd>Users search the catalog from the homepage, often with transliterated queries or with the wrong keyboard layout.</dd>
+            <dt>Contribution</dt>
+            <dd>Built site-wide search with relevance ranking, transliteration and keyboard-layout correction. Later built a separate search service on Swoole and Elasticsearch/OpenSearch, which made search faster.</dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Swoole</li><li>Elasticsearch</li><li>OpenSearch</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Registry data ingestion for XFirm and CheckPerson</h3>
+            <p class="work-meta">Press Index · 2017–2018</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>Two products built on public registry data about companies and sole proprietors: counterparty checks and checks on individuals.</dd>
+            <dt>Problem</dt>
+            <dd>Registry data arrives as archives of XML documents that have to be parsed, validated and made searchable.</dd>
+            <dt>Contribution</dt>
+            <dd>Built the parser service. It consumed RabbitMQ messages naming an archive, downloaded the archive from Hadoop, mapped records lazily onto JAXB models generated from XSD, handled invalid records such as a missing taxpayer ID, and stored the result as JSON in Elassandra (Elasticsearch + Cassandra).</dd>
+          </dl>
+          <ul class="tags"><li>Kotlin</li><li>Java</li><li>Spring Boot</li><li>RabbitMQ</li><li>Hadoop</li><li>Elasticsearch</li><li>Cassandra</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Universal electronic queue</h3>
+            <p class="work-meta">Integrix · 2016–2017</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>Booking appointments with public institutions through the web and mobile apps.</dd>
+            <dt>Problem</dt>
+            <dd>Each queue provider exposed a different API — SOAP, REST and others.</dd>
+            <dt>Contribution</dt>
+            <dd>Worked on a RESTful service that offers one API over all providers. A server module routes each request to a plugin loaded from a plugins directory; every provider is an implementation of a shared <code>Plugin</code> interface, for example a SOAP adapter for SofTrust. The service also runs standalone for organizations without a queue system.</dd>
+          </dl>
+          <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Maven</li><li>Flyway</li><li>PostgreSQL</li><li>PL/pgSQL</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Microservices for a neural-network training platform</h3>
+            <p class="work-meta">Bell Integrator · 2018</p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>A microservice system on AWS for training neural networks.</dd>
+            <dt>Contribution</dt>
+            <dd>Worked on two services: an upload service that stored users' training files in Amazon S3, and a service that owned user data, subscriptions and purchases.</dd>
+          </dl>
+          <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Spring Cloud</li><li>JPA/Hibernate</li><li>Flyway</li><li>PostgreSQL</li><li>AWS S3</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Anti-plagiarism system</h3>
+            <p class="work-meta">Kostanay University · 2014–2016</p>
+          </div>
+          <dl>
+            <dt>Problem</dt>
+            <dd>Check theses for borrowed text without buying a commercial product.</dd>
+            <dt>Contribution</dt>
+            <dd>Designed and built the system: a PHP server with MySQL full-text search and shingle-based comparison behind a REST API, a web interface for quick checks, and a Java Swing client for batch checking, adding documents to the corpus and exporting reports to Excel.</dd>
+          </dl>
+          <ul class="tags"><li>PHP</li><li>Java Swing</li><li>MySQL</li><li>REST</li></ul>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>FASM Editor</h3>
+            <p class="work-meta">Open source · <a href="https://github.com/Researcher86/fasm-editor">GitHub</a></p>
+          </div>
+          <dl>
+            <dt>Context</dt>
+            <dd>A source editor for the flat assembler, written for myself and the assembly-programming community.</dd>
+            <dt>Contribution</dt>
+            <dd>A syntax analyzer, highlighting, code completion, and generation of export lists from DLLs.</dd>
+          </dl>
+          <ul class="tags"><li>Delphi</li></ul>
+        </article>
+      </div>
+
+      <div class="earlier">
+        <h3>Earlier projects</h3>
+        <ul class="list">
+          <li>ownRadio — REST backend for a music app with iOS, Android and Windows clients that cache music for offline listening (Java, Spring Boot, PostgreSQL).</li>
+          <li>Internal university software — a task tracker with WebSocket updates, a correspondence registry, an intranet portal (Java, Spring, PHP, MySQL).</li>
+          <li>Online store for computer hardware — <a href="https://github.com/Researcher86/shop">GitHub</a> (Java, Spring MVC, Spring Security, JPA).</li>
+          <li>Online library — <a href="https://github.com/Researcher86/php-online-library">GitHub</a> (Laravel, Vue, PostgreSQL, Elasticsearch, MongoDB).</li>
+          <li>Car dealership sales accounting — desktop application (Delphi, MS Access).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2 id="experience-title">Career</h2>
+
+      <ol class="timeline">
+        <li class="role">
+          <p class="role-period">Apr 2026 — present</p>
+          <div>
+            <h3>Senior PHP Backend Engineer <span class="role-company">· <a href="https://systeme.io/">systeme.io</a></span></h3>
+            <p>A high-load SaaS platform for running an online business; customers worldwide, mostly in Europe and the US.</p>
+            <p>Backend work on the CRM (deal pipelines, access rules, filtering) and on account flows in a large Symfony monolith; carried out an incremental rollout of <code>strict_types</code> across the codebase.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Jun 2021 — Mar 2026</p>
+          <div>
+            <h3>Lead PHP Developer <span class="role-company">· Innovation Group, Odesa</span></h3>
+            <p>Several high-traffic consumer web products sharing a central catalog service, integrated over RabbitMQ.</p>
+            <ul class="list">
+              <li>Took the central catalog service to production and moved it to CQRS.</li>
+              <li>Upgraded services through PHP 8.1–8.3 and Symfony 5.4–6.4.</li>
+              <li>Brought database and Redis load and cost back down by fixing the defects behind them.</li>
+              <li>Built catalog search, then a separate search service on Swoole and OpenSearch.</li>
+              <li>Made tests and code-style checks required in GitLab CI; aligned local Docker with production.</li>
+            </ul>
+            <ul class="tags"><li>PHP 8</li><li>Symfony</li><li>RabbitMQ</li><li>Redis</li><li>OpenSearch</li><li>Swoole</li><li>RoadRunner</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Jan 2021 — Apr 2021</p>
+          <div>
+            <h3>Lead PHP Developer <span class="role-company">· COMS, Moscow</span></h3>
+            <p>Supported a monitoring system for network equipment that detects, diagnoses and reports failures.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>MySQL</li><li>Redis</li><li>RabbitMQ</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Jan 2020 — Dec 2020</p>
+          <div>
+            <h3>Lead PHP Developer <span class="role-company">· NameSilo, USA</span></h3>
+            <p>Supported a domain name search and registration platform.</p>
+            <ul class="tags"><li>PHP</li><li>Yii</li><li>Symfony</li><li>MySQL</li><li>Redis</li><li>Docker</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Oct 2018 — Oct 2019</p>
+          <div>
+            <h3>Lead PHP Developer <span class="role-company">· Virtual Health, New York</span></h3>
+            <p>Developed a healthcare web platform (NextLevelHealth).</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Yii 2</li><li>MySQL</li><li>Redis</li><li>Elasticsearch</li><li>RabbitMQ</li></ul>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Apr 2018 — Sep 2018</p>
+          <div>
+            <h3>Lead Java Developer <span class="role-company">· Bell Integrator, Moscow</span></h3>
+            <p>Microservices for a neural-network training platform on AWS.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Sep 2017 — Mar 2018</p>
+          <div>
+            <h3>Kotlin Developer <span class="role-company">· Press Index, Yekaterinburg</span></h3>
+            <p>Data aggregation services over company and sole-proprietor registries.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">Oct 2016 — Aug 2017</p>
+          <div>
+            <h3>Java Developer <span class="role-company">· Integrix, Volgograd</span></h3>
+            <p>An electronic queue service and the ownRadio backend.</p>
+          </div>
+        </li>
+        <li class="role">
+          <p class="role-period">May 2014 — Oct 2016</p>
+          <div>
+            <h3>Software Engineer <span class="role-company">· Kostanay Engineering and Economics University</span></h3>
+            <p>Internal automation software, including the anti-plagiarism system.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="subsection">
+        <h3>Education</h3>
+        <ul class="education">
+          <li>MSc, Computer Engineering and Software <span>· Kostanay Social and Technical University · 2010–2012</span></li>
+          <li>BSc, Computer Engineering and Software <span>· Kostanay Engineering and Pedagogical University · 2007–2010</span></li>
+          <li>INTUIT certificates: The PHP Programming Language, Advanced Java Programming, Introduction to MySQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section class="section" id="writing" aria-labelledby="writing-title">
+    <div class="container">
+      <p class="section-label">Writing</p>
+      <h2 id="writing-title">Engineering Lab book</h2>
+      <p class="lead">Chapters written from the tagged code of each lab, in Russian. English notes are not published yet.</p>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Engineering Lab</h3>
+          <p>54 chapters across five labs: PHP Systems Lab (26), Algorithms Lab, Architecture Lab, Architecture Decision Lab and System Design Lab (7 each).</p>
+          <div class="card-links"><a href="https://github.com/Researcher86/engineering-lab-book">Read on GitHub</a></div>
+        </article>
+        <article class="card">
+          <h3>PHP Concurrency course</h3>
+          <p>38 lessons, each a folder with an explanation, an ASCII diagram and a runnable <code>main.php</code>.</p>
+          <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">Read on GitHub</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 id="contact-title">Get in touch</h2>
+
+      <ul class="contact-list">
+        <li><a href="mailto:researcher2286@gmail.com"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>Email<small>researcher2286@gmail.com</small></span></a></li>
+        <li><a href="https://github.com/Researcher86"><svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg><span>GitHub<small>Researcher86</small></span></a></li>
+        <li><a href="https://www.linkedin.com/in/researcher2286"><svg aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg><span>LinkedIn<small>researcher2286</small></span></a></li>
+        <li><a href="https://t.me/researcher2286"><svg aria-hidden="true" focusable="false"><use href="#i-telegram"/></svg><span>Telegram<small>@researcher2286</small></span></a></li>
+      </ul>
+      <p class="location">Based in Kostanay, Kazakhstan.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© Tanat Alpenov</span>
+    <a href="https://github.com/Researcher86/researcher86.github.io">Source</a>
+  </div>
+</footer>
 
 </body>
-
 </html>
