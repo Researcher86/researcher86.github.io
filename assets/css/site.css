@@ -761,3 +761,20 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
   max-width: 30rem;
 }
 .work-diagram svg { display: block; width: 100%; height: auto; }
+
+/* Case screenshots -------------------------------------------------------- */
+.work-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--space-3);
+  max-width: 40rem;
+  margin-top: var(--space-4);
+}
+.work-shots a { display: block; }
+.work-shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
