@@ -489,6 +489,7 @@
               </ul>
             </dd>
           </dl>
+          <p class="metric"><strong>27</strong> репозиториев используют пакет: сервисы, бандлы и DTO-пакеты</p>
           <ul class="tags"><li>PHP</li><li>Composer</li><li>PHPStan</li><li>PHP CS Fixer</li><li>PHPUnit</li><li>ParaTest</li><li>GitHub Actions</li><li>Docker Compose</li><li>Make</li></ul>
         </article>
 
@@ -513,7 +514,7 @@
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>14×</strong> быстрее прогон интеграционных тестов</p>
+          <p class="metric"><strong>14×</strong> быстрее интеграционные тесты</p>
           <ul class="tags"><li>PHPUnit</li><li>ParaTest</li><li>OPcache</li><li>Doctrine</li><li>Docker Compose</li></ul>
         </article>
 
@@ -531,7 +532,8 @@
             <dd>
               <ul class="list">
                 <li>Довёл сервис до продакшена и по очереди интегрировал его с продуктами.</li>
-                <li>Перевёл на CQRS и на поддерживаемые версии PHP и Symfony.</li>
+                <li>Перевёл на CQRS.</li>
+                <li>Обновил до поддерживаемых версий PHP и Symfony.</li>
                 <li>Добавил журнал всех изменений, массовое редактирование и прогресс асинхронных операций.</li>
                 <li>Перенёс CSV-файлы продуктов из Docker volumes в S3 — деплой перестал зависать.</li>
                 <li>Снизил потребление памяти массовыми командами, добавил тесты и проверку кодстайла в GitLab CI.</li>
@@ -587,11 +589,12 @@
                 <li>Внедрил primary/replica, чтобы мощность базы и счёт следовали за нагрузкой.</li>
                 <li>Помог найти ошибку, из-за которой Redis был загружен на 100%; нагрузка и стоимость вернулись к прежним.</li>
                 <li>Устранил неконтролируемую генерацию сообщений в RabbitMQ, задерживавшую обновления у потребителей, и переделал обработку событий, чтобы падение одного слушателя не роняло остальные.</li>
-                <li>Включил OPcache во всех сервисах и перевёл главную страницу на RoadRunner; preloading и JIT сократили время полного прогона тестов в 10 раз.</li>
+                <li>Включил OPcache во всех сервисах и перевёл главную страницу на RoadRunner.</li>
+                <li>Настроил preloading и JIT; после этого полный прогон тестов стал в 10 раз быстрее.</li>
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>10×</strong> быстрее полный прогон тестов после включения preloading и JIT</p>
+          <p class="metric"><strong>10×</strong> быстрее полный прогон тестов после настройки preloading и JIT</p>
           <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
         </article>
 

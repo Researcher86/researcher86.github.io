@@ -157,7 +157,7 @@
       <dl class="stats">
         <div><dt>Years of commercial development</dt><dd>12+</dd></div>
         <div><dt>Public lab repositories</dt><dd>15</dd></div>
-        <div><dt>Book chapters written from the labs</dt><dd>54</dd></div>
+        <div><dt>Engineering Lab book chapters</dt><dd>54</dd></div>
         <div><dt>Learning projects on backend internals</dt><dd>9</dd></div>
       </dl>
     </div>
@@ -167,7 +167,7 @@
   <section class="section" id="about" aria-labelledby="about-title">
     <div class="container">
       <p class="section-label">About</p>
-      <h2 id="about-title">A backend engineer who wants to know how it works underneath</h2>
+      <h2 id="about-title">A backend engineer who wants to understand how things work under the hood</h2>
       <div class="about">
         <img class="about-photo" src="assets/images/tanat.jpg" width="480" height="480" alt="Portrait of Tanat Alpenov" loading="lazy">
         <div class="prose">
@@ -184,7 +184,7 @@
     <div class="container">
       <p class="section-label">Engineering focus</p>
       <h2 id="focus-title">Where I work and what I study</h2>
-      <p class="lead">Areas of production experience and of ongoing study. The note under each card says where the experience comes from.</p>
+      <p class="lead">Areas of production experience and ongoing study. The note under each card says where the experience comes from.</p>
 
       <div class="grid grid-3">
         <article class="card">
@@ -489,6 +489,7 @@
               </ul>
             </dd>
           </dl>
+          <p class="metric"><strong>27</strong> repositories use the package: services, bundles and DTO packages</p>
           <ul class="tags"><li>PHP</li><li>Composer</li><li>PHPStan</li><li>PHP CS Fixer</li><li>PHPUnit</li><li>ParaTest</li><li>GitHub Actions</li><li>Docker Compose</li><li>Make</li></ul>
         </article>
 
@@ -513,7 +514,7 @@
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>14×</strong> faster integration test run</p>
+          <p class="metric"><strong>14×</strong> faster integration test suite</p>
           <ul class="tags"><li>PHPUnit</li><li>ParaTest</li><li>OPcache</li><li>Doctrine</li><li>Docker Compose</li></ul>
         </article>
 
@@ -531,7 +532,8 @@
             <dd>
               <ul class="list">
                 <li>Took the service to production and integrated it with the products one by one.</li>
-                <li>Moved it to CQRS and upgraded it to a supported PHP and Symfony stack.</li>
+                <li>Moved it to CQRS.</li>
+                <li>Upgraded it to a supported PHP and Symfony stack.</li>
                 <li>Added a log of every change, bulk editing, and progress reporting for asynchronous operations.</li>
                 <li>Moved per-product CSV files from Docker volumes to S3, which stopped deployments from hanging.</li>
                 <li>Reduced the memory use of bulk commands, and added tests and code-style checks to GitLab CI.</li>
@@ -587,11 +589,12 @@
                 <li>Introduced primary/replica databases so capacity, and the bill, follow the load.</li>
                 <li>Helped find the bug that kept Redis at 100% load; it returned to its previous level and cost.</li>
                 <li>Fixed uncontrolled message generation in RabbitMQ that delayed updates to consumers, and reworked event handling so one failing listener no longer brings down the rest.</li>
-                <li>Enabled OPcache across services and moved a homepage to RoadRunner; preloading and JIT cut the full test run time by 10×.</li>
+                <li>Enabled OPcache across services and moved a homepage to RoadRunner.</li>
+                <li>Configured preloading and JIT; after that the full test suite ran 10× faster.</li>
               </ul>
             </dd>
           </dl>
-          <p class="metric"><strong>10×</strong> shorter full test run after enabling preloading and JIT</p>
+          <p class="metric"><strong>10×</strong> faster full test suite after configuring preloading and JIT</p>
           <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
         </article>
 
@@ -639,7 +642,7 @@
             <dt>Problem</dt>
             <dd>Registry data arrives as archives of XML documents that have to be parsed, validated and made searchable.</dd>
             <dt>Contribution</dt>
-            <dd>Built the parser service. It consumed RabbitMQ messages naming an archive, downloaded the archive from Hadoop, mapped records lazily onto JAXB models generated from XSD, handled invalid records such as a missing taxpayer ID, and stored the result as JSON in Elassandra (Elasticsearch + Cassandra).</dd>
+            <dd>Built the parser service. It consumed RabbitMQ messages naming an archive, downloaded the archive from Hadoop, lazily mapped records to JAXB models generated from XSD, handled invalid records such as a missing taxpayer ID, and stored the result as JSON in Elassandra (Elasticsearch + Cassandra).</dd>
           </dl>
           <figure class="work-diagram">
             <svg viewBox="0 0 432 128" role="img" aria-labelledby="registry-diagram-title">
