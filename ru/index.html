@@ -641,6 +641,28 @@
             <dt>Что сделал</dt>
             <dd>Написал сервис-парсер. Он получал из RabbitMQ сообщение с именем архива, скачивал архив из Hadoop, лениво маппил записи на JAXB-модели, сгенерированные из XSD, обрабатывал ошибочные записи (например, без ИНН) и сохранял результат в JSON в Elassandra (Elasticsearch + Cassandra).</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 128" role="img" aria-labelledby="registry-diagram-title">
+              <title id="registry-diagram-title">Загрузка реестров: сервис-парсер получает имя архива из RabbitMQ, скачивает XML-архив из Hadoop и сохраняет разобранные записи в JSON в Elassandra.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M116 26H144"/>
+                <path d="M286 26H314"/>
+                <path d="M216 84V48"/>
+              </g>
+              <rect class="d-box-accent" x="146" y="6" width="140" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="6" y="8" width="110" height="36" rx="6"/>
+                <rect x="316" y="8" width="110" height="36" rx="6"/>
+                <rect x="136" y="86" width="160" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="61" y="26">RabbitMQ</text>
+                <text x="216" y="26" class="d-label-accent">Парсер · JAXB</text>
+                <text x="371" y="26">Elassandra</text>
+                <text x="216" y="104">Hadoop · XML-архивы</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>Kotlin</li><li>Java</li><li>Spring Boot</li><li>RabbitMQ</li><li>Hadoop</li><li>Elasticsearch</li><li>Cassandra</li></ul>
         </article>
 
@@ -657,6 +679,32 @@
             <dt>Что сделал</dt>
             <dd>Участвовал в разработке REST-сервиса с единым API поверх всех поставщиков. Серверный модуль направляет запрос в плагин из каталога plugins; каждый поставщик — реализация общего интерфейса <code>Plugin</code>, например SOAP-адаптер для SofTrust. Сервис работает и самостоятельно — для организаций без своей системы очереди.</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 200" role="img" aria-labelledby="queue-diagram-title">
+              <title id="queue-diagram-title">Электронная очередь: веб и мобильные приложения обращаются к единому REST API; сервер направляет запрос в плагин поставщика, например SOAP-адаптер, или в собственную очередь.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M216 44V78"/>
+                <path d="M216 120V136M70 136H362" marker-end="none"/>
+                <path d="M70 136V156"/>
+                <path d="M216 136V156"/>
+                <path d="M362 136V156"/>
+              </g>
+              <rect class="d-box-accent" x="116" y="80" width="200" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="126" y="8" width="180" height="36" rx="6"/>
+                <rect x="10" y="158" width="120" height="36" rx="6"/>
+                <rect x="156" y="158" width="120" height="36" rx="6"/>
+                <rect x="302" y="158" width="120" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="216" y="26">Веб и мобильные</text>
+                <text x="216" y="100" class="d-label-accent">REST · единый API</text>
+                <text x="70" y="176">SOAP-плагин</text>
+                <text x="216" y="176">REST-плагин</text>
+                <text x="362" y="176">Своя очередь</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Maven</li><li>Flyway</li><li>PostgreSQL</li><li>PL/pgSQL</li></ul>
         </article>
 
@@ -671,6 +719,27 @@
             <dt>Что сделал</dt>
             <dd>Работал над двумя сервисами: загрузки обучающих файлов пользователей в Amazon S3 и сервисом пользовательских данных, подписок и покупок.</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 100" role="img" aria-labelledby="bell-diagram-title">
+              <title id="bell-diagram-title">Два микросервиса: сервис загрузки сохраняет обучающие файлы в Amazon S3; сервис пользователей хранит данные, подписки и покупки в PostgreSQL.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M200 26H286"/>
+                <path d="M200 74H286"/>
+              </g>
+              <rect class="d-box-accent" x="6" y="6" width="194" height="40" rx="6"/>
+              <rect class="d-box-accent" x="6" y="54" width="194" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="288" y="8" width="138" height="36" rx="6"/>
+                <rect x="288" y="56" width="138" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="103" y="26" class="d-label-accent">Загрузка файлов</text>
+                <text x="103" y="74" class="d-label-accent">Пользователи · подписки</text>
+                <text x="357" y="26">Amazon S3</text>
+                <text x="357" y="74">PostgreSQL</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>Java 8</li><li>Spring Boot</li><li>Spring Cloud</li><li>JPA/Hibernate</li><li>Flyway</li><li>PostgreSQL</li><li>AWS S3</li></ul>
         </article>
 
@@ -685,6 +754,28 @@
             <dt>Что сделал</dt>
             <dd>Спроектировал и разработал систему: PHP-сервер с полнотекстовым поиском MySQL и алгоритмом шинглов за REST API, веб-интерфейс для быстрой проверки и клиент на Java Swing для пакетной проверки, пополнения базы документов и выгрузки отчётов в Excel.</dd>
           </dl>
+          <figure class="work-diagram">
+            <svg viewBox="0 0 432 100" role="img" aria-labelledby="plag-diagram-title">
+              <title id="plag-diagram-title">Система «Антиплагиат»: веб-интерфейс и клиент на Java Swing обращаются к PHP-серверу по REST; сервер сравнивает документы через полнотекстовый поиск MySQL и шинглы.</title>
+              <g class="d-lines" marker-end="url(#arrow)">
+                <path d="M140 26H154V42H170"/>
+                <path d="M140 74H154V58H170"/>
+                <path d="M302 50H318"/>
+              </g>
+              <rect class="d-box-accent" x="172" y="30" width="130" height="40" rx="6"/>
+              <g class="d-box">
+                <rect x="6" y="8" width="134" height="36" rx="6"/>
+                <rect x="6" y="56" width="134" height="36" rx="6"/>
+                <rect x="320" y="32" width="106" height="36" rx="6"/>
+              </g>
+              <g class="d-label">
+                <text x="73" y="26">Веб-интерфейс</text>
+                <text x="73" y="74">Клиент Java Swing</text>
+                <text x="237" y="50" class="d-label-accent">PHP · шинглы</text>
+                <text x="373" y="50">MySQL · FTS</text>
+              </g>
+            </svg>
+          </figure>
           <ul class="tags"><li>PHP</li><li>Java Swing</li><li>MySQL</li><li>REST</li></ul>
         </article>
 
