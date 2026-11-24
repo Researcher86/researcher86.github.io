@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tanat Alpenov — Senior PHP Backend Engineer</title>
-  <meta name="description" content="Tanat Alpenov, Senior PHP Backend Engineer. Backend architecture, system design and performance; engineering labs that rebuild worker pools, job queues, caches, HTTP servers and a database engine in PHP.">
+  <meta name="description" content="Tanat Alpenov, Senior PHP Backend Engineer working with AI coding agents. Backend architecture, system design and performance; personal learning labs on worker pools, job queues, caches, HTTP servers and databases in PHP.">
   <meta name="author" content="Tanat Alpenov">
   <link rel="canonical" href="https://researcher86.github.io/">
 
@@ -85,18 +85,75 @@
 
   <!-- Hero -->
   <section class="hero" id="top" aria-labelledby="hero-title">
-    <div class="container">
-      <p class="hero-name">Tanat Alpenov</p>
-      <h1 id="hero-title">Senior PHP Backend Engineer</h1>
-      <p class="hero-tagline">Building reliable backend systems, exploring system architecture, and engineering for performance.</p>
-      <p class="hero-intro">12+ years of commercial software development. Focused on backend engineering, system design, performance optimization, and understanding the internals of software systems.</p>
-      <div class="actions">
-        <a class="button button-primary" href="#labs">View Engineering Labs</a>
-        <a class="button" href="https://github.com/Researcher86">
-          <svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub
-        </a>
-        <a class="button" href="#contact">Contact</a>
+    <div class="container hero-grid">
+      <div>
+        <p class="hero-name">Tanat Alpenov</p>
+        <h1 id="hero-title">Senior PHP Backend Engineer</h1>
+        <p class="hero-role">AI-assisted engineering with Claude Code and Codex</p>
+        <p class="hero-tagline">Building reliable backend systems, exploring system architecture, and engineering for performance.</p>
+        <p class="hero-intro">12+ years of commercial software development. Focused on backend engineering, system design, performance optimization, and understanding the internals of software systems.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#labs">View Engineering Labs</a>
+          <a class="button" href="https://github.com/Researcher86">
+            <svg aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub
+          </a>
+          <a class="button" href="#contact">Contact</a>
+        </div>
       </div>
+
+      <figure class="hero-diagram">
+        <svg viewBox="0 0 432 360" role="img" aria-labelledby="diagram-title">
+          <title id="diagram-title">php-systems-platform architecture: an HTTP server feeds the application runtime, which uses a cache, a database, a search service and a job queue; workers process jobs and update search; all of them run on the system runtime.</title>
+          <defs>
+            <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path class="d-arrow" d="M0 0 8 4 0 8Z"/>
+            </marker>
+          </defs>
+          <g class="d-lines" marker-end="url(#arrow)">
+            <path d="M216 44V82"/>
+            <path d="M216 124V146M54 146H378" marker-end="none"/>
+            <path d="M54 146V166"/>
+            <path d="M162 146V166"/>
+            <path d="M270 146V166"/>
+            <path d="M378 146V166"/>
+            <path d="M378 204V238"/>
+            <path d="M330 258H270V206"/>
+            <path d="M54 204V310"/>
+            <path d="M162 204V310"/>
+            <path d="M378 276V310"/>
+          </g>
+          <g class="d-box">
+            <rect x="166" y="8" width="100" height="36" rx="6"/>
+            <rect x="6" y="168" width="96" height="36" rx="6"/>
+            <rect x="114" y="168" width="96" height="36" rx="6"/>
+            <rect x="222" y="168" width="96" height="36" rx="6"/>
+            <rect x="330" y="168" width="96" height="36" rx="6"/>
+            <rect x="330" y="240" width="96" height="36" rx="6"/>
+            <rect x="6" y="312" width="420" height="40" rx="6"/>
+          </g>
+          <rect class="d-box-accent" x="116" y="84" width="200" height="40" rx="6"/>
+          <g class="d-label">
+            <text x="216" y="30">HTTP</text>
+            <text x="216" y="108" class="d-label-accent">Application runtime</text>
+            <text x="54" y="190">Cache</text>
+            <text x="162" y="190">Database</text>
+            <text x="270" y="190">Search</text>
+            <text x="378" y="190">Jobs</text>
+            <text x="378" y="262">Workers</text>
+            <text x="216" y="336">System runtime: processes · memory · I/O</text>
+          </g>
+        </svg>
+        <figcaption><a href="https://github.com/Researcher86/php-systems-platform">php-systems-platform</a>: the PHP Systems Lab components running as one backend.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <dl class="stats">
+        <div><dt>Years of commercial development</dt><dd>12+</dd></div>
+        <div><dt>Public lab repositories</dt><dd>15</dd></div>
+        <div><dt>Book chapters written from the labs</dt><dd>54</dd></div>
+        <div><dt>Learning projects on backend internals</dt><dd>9</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -110,7 +167,7 @@
         <div class="prose">
           <p>I started programming in 2007 and have worked professionally since 2014. My first job was at a university, where I built its internal software: an anti-plagiarism system in PHP and Java, a document registry and a task tracker. I also wrote desktop applications in Delphi, including FASM Editor.</p>
           <p>From 2016 to 2018 I worked on Java and Kotlin backends: a plugin-based REST service over third-party queue systems, a RabbitMQ-driven ingestion service for company registry data, and Spring Boot microservices on AWS. Since 2018 my work has been mainly PHP and Symfony: products in healthcare, domain registration and network monitoring, then five years on a group of high-traffic consumer products, and now a SaaS platform for online businesses.</p>
-          <p>Outside of work I build small, measured implementations of the mechanisms backend systems depend on — worker pools, job queues, an event-driven cache server, an HTTP server, a database engine with a write-ahead log — to see where their guarantees come from. I prefer hands-on engineering to people management.</p>
+          <p>Outside of work I learn by building small, simplified versions of the mechanisms backend systems depend on — worker pools, job queues, an event-driven cache server, an HTTP server, a database engine with a write-ahead log — and keep them as reference notes. I prefer hands-on engineering to people management.</p>
         </div>
       </div>
     </div>
@@ -156,7 +213,7 @@
             <li>Job queues: leases, retries, dead letters</li>
             <li>Caching, storage engines, write-ahead logging</li>
           </ul>
-          <p class="source">Studied in depth in PHP Systems Lab.</p>
+          <p class="source">Explored through learning projects in PHP Systems Lab.</p>
         </article>
 
         <article class="card">
@@ -194,6 +251,17 @@
           </ul>
           <p class="source">Production work; PHPStan level 8 in the labs.</p>
         </article>
+
+        <article class="card card-wide">
+          <h3>AI-assisted engineering</h3>
+          <ul class="list">
+            <li>Daily development with coding agents: Claude Code, Codex</li>
+            <li>Maintaining agent instructions (<code>AGENTS.md</code>) in a large codebase</li>
+            <li>Automated AI review of pull requests in CI</li>
+            <li>Large mechanical changes split into small PRs, each checked by tests, static analysis and AI review</li>
+          </ul>
+          <p class="source">Production work at systeme.io, 2026.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -203,94 +271,145 @@
     <div class="container">
       <p class="section-label">Engineering labs</p>
       <h2 id="labs-title">Rebuilding the mechanisms, then measuring them</h2>
-      <p class="lead">Independent research repositories. Each one is a small, readable implementation of a real mechanism, with tests, static analysis, CI, and a Docker environment so it runs the same everywhere. They are educational models, not production replacements.</p>
+      <p class="lead">Personal learning projects. I build simplified versions of the mechanisms I want to understand and keep them as working reference notes for myself. Each is small and runnable — tests, static analysis, CI, Docker — but they are study material: they show what I have explored, not a claim of deep expertise in every topic, and they are not production replacements.</p>
 
       <div class="subsection">
         <h3>PHP Systems Lab</h3>
         <p>Nine projects, from memory and processes up to a platform that joins them over real process and network boundaries. <a href="https://github.com/Researcher86/php-systems-lab">Overview repository</a>.</p>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <span class="card-index">01</span>
-            <h4 class="mono">php-memory-lab</h4>
-            <p>Memory from PHP's side: RSS, garbage collection, <code>fork()</code> and copy-on-write, <code>mmap</code>, shared memory, a shared-memory ring buffer, FFI and native memory.</p>
-            <p class="question">What actually happens to memory after <code>fork()</code>?</p>
-            <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>sockets</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
-          </article>
+        <ol class="stack" reversed>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">09</span><span class="layer-name">php-systems-platform</span><span class="layer-focus">all of the above, integrated</span></summary>
+              <div class="layer-body">
+                <p>The integration project: HTTP, cache, database, search, jobs and workers from the previous projects running together as one backend platform.</p>
+                <p class="question">How should failures and backpressure move between components?</p>
+                <ul class="tags"><li>PHP 8.5</li><li>multi-process</li><li>event-driven</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">08</span><span class="layer-name">php-mini-search</span><span class="layer-focus">stemming · inverted index · BM25</span></summary>
+              <div class="layer-body">
+                <p>A full-text search service: Unicode normalization, Snowball stemming, an inverted index, BM25 ranking, an append-only log and crash recovery.</p>
+                <p class="question">What does “more relevant” mean, as a number?</p>
+                <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>inverted index</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">07</span><span class="layer-name">php-mini-database</span><span class="layer-focus">pages · B-trees · SQL · transactions · WAL</span></summary>
+              <div class="layer-body">
+                <p>A small relational engine: pages and records, B-tree indexes, a SQL parser and executor, transactions, a write-ahead log and crash recovery.</p>
+                <p class="question">How can a database recover after a crash?</p>
+                <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">06</span><span class="layer-name">php-mini-http-server</span><span class="layer-focus">parsing · routing · middleware · keep-alive</span></summary>
+              <div class="layer-body">
+                <p>An event-driven HTTP server: request parsing, routing, middleware, response buffering and keep-alive.</p>
+                <p class="question">What happens when a client is slower than the server?</p>
+                <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">05</span><span class="layer-name">php-mini-cache</span><span class="layer-focus">RESP · pipelining · TTL · Pub/Sub</span></summary>
+              <div class="layer-body">
+                <p>An event-driven in-memory server speaking RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> with <code>WATCH</code>, snapshots through a forked child, and measured event-loop fairness.</p>
+                <p class="question">How does one event loop serve many connections, and what happens when one client becomes too expensive?</p>
+                <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>non-blocking I/O</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">04</span><span class="layer-name">php-job-queue</span><span class="layer-focus">leases · ACK · retries · dead letters</span></summary>
+              <div class="layer-body">
+                <p>Reliable background jobs: delivery leases and fencing, acknowledgements, retries with backoff, delayed jobs, priorities, dead letters, and append-only file persistence.</p>
+                <p class="question">What does “reliable delivery” actually mean when a worker crashes mid-job?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only log</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">03</span><span class="layer-name">php-worker-pool</span><span class="layer-focus">master/worker · supervision · graceful shutdown</span></summary>
+              <div class="layer-body">
+                <p>A persistent master/worker pool: worker lifecycle and states, supervision, a length-prefixed protocol with correlation IDs, draining, timeouts, backpressure, graceful reload and autoscaling.</p>
+                <p class="question">How can a pool of long-lived workers shut down without dropping requests in flight?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix sockets</li><li>stream_select</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">02</span><span class="layer-name">php-concurrency</span><span class="layer-focus">processes · IPC · event loops · Fibers</span></summary>
+              <div class="layer-body">
+                <p>A 38-lesson course of runnable experiments: processes, IPC, supervision, producer/consumer, pipelines, actors, work stealing, event loops, Fibers, and hand-built PHP-FPM-, RoadRunner- and Messenger-style runtimes.</p>
+                <p class="question">How do event loops work, and what problem do Fibers solve?</p>
+                <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Lessons in Russian</span></div>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="layer">
+              <summary><span class="layer-level">01</span><span class="layer-name">php-memory-lab</span><span class="layer-focus">memory · fork · copy-on-write · mmap · FFI</span></summary>
+              <div class="layer-body">
+                <p>Memory from PHP's side: RSS, garbage collection, <code>fork()</code> and copy-on-write, <code>mmap</code>, shared memory, a shared-memory ring buffer, FFI and native memory.</p>
+                <p class="question">What actually happens to memory after <code>fork()</code>?</p>
+                <ul class="tags"><li>PHP</li><li>FFI</li><li>shmop</li><li>SysV IPC</li><li>sockets</li></ul>
+                <div class="card-links"><a href="https://github.com/Researcher86/php-memory-lab">GitHub</a></div>
+              </div>
+            </details>
+          </li>
+        </ol>
 
-          <article class="card">
-            <span class="card-index">02</span>
-            <h4 class="mono">php-concurrency</h4>
-            <p>A 38-lesson course of runnable experiments: processes, IPC, supervision, producer/consumer, pipelines, actors, work stealing, event loops, Fibers, and hand-built PHP-FPM-, RoadRunner- and Messenger-style runtimes.</p>
-            <p class="question">How do event loops work, and what problem do Fibers solve?</p>
-            <ul class="tags"><li>PHP</li><li>pcntl</li><li>posix</li><li>Fibers</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-concurrency">GitHub</a><span class="source">Lessons in Russian</span></div>
-          </article>
+        <figure class="code">
+          <figcaption>
+            <span>From <a href="https://github.com/Researcher86/php-mini-cache/blob/master/src/EventLoop/SelectLoop.php">php-mini-cache/src/EventLoop/SelectLoop.php</a> — one pass of the event loop</span>
+            <span class="code-note">abridged</span>
+          </figcaption>
+<pre><code><span class="k">public function</span> <span class="f">tick</span>(?<span class="t">float</span> <span class="v">$timeoutSeconds</span>): <span class="t">int</span>
+{
+    <span class="v">$this</span>-&gt;<span class="f">forgetClosedStreams</span>();
 
-          <article class="card">
-            <span class="card-index">03</span>
-            <h4 class="mono">php-worker-pool</h4>
-            <p>A persistent master/worker pool: worker lifecycle and states, supervision, a length-prefixed protocol with correlation IDs, draining, timeouts, backpressure, graceful reload and autoscaling.</p>
-            <p class="question">How can a pool of long-lived workers shut down without dropping requests in flight?</p>
-            <ul class="tags"><li>PHP</li><li>pcntl</li><li>Unix sockets</li><li>stream_select</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-worker-pool">GitHub</a></div>
-          </article>
+    <span class="v">$read</span> = <span class="f">array_map</span>(<span class="k">static fn</span> (<span class="t">array</span> <span class="v">$entry</span>) =&gt; <span class="v">$entry</span>[<span class="n">0</span>], <span class="v">$this</span>-&gt;readListeners);
+    <span class="v">$write</span> = <span class="f">array_map</span>(<span class="k">static fn</span> (<span class="t">array</span> <span class="v">$entry</span>) =&gt; <span class="v">$entry</span>[<span class="n">0</span>], <span class="v">$this</span>-&gt;writeListeners);
 
-          <article class="card">
-            <span class="card-index">04</span>
-            <h4 class="mono">php-job-queue</h4>
-            <p>Reliable background jobs: delivery leases and fencing, acknowledgements, retries with backoff, delayed jobs, priorities, dead letters, and append-only file persistence.</p>
-            <p class="question">What does “reliable delivery” actually mean when a worker crashes mid-job?</p>
-            <ul class="tags"><li>PHP</li><li>pcntl</li><li>at-least-once</li><li>append-only log</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-job-queue">GitHub</a></div>
-          </article>
+    <span class="v">$wait</span> = <span class="v">$this</span>-&gt;<span class="f">shorterWait</span>(<span class="v">$timeoutSeconds</span>, <span class="v">$this</span>-&gt;timers-&gt;<span class="f">nextDueIn</span>(<span class="v">$this</span>-&gt;clock-&gt;<span class="f">now</span>()));
+    <span class="v">$ready</span> = <span class="v">$this</span>-&gt;<span class="f">waitForReadiness</span>(<span class="v">$read</span>, <span class="v">$write</span>, <span class="v">$wait</span>);
+    <span class="v">$this</span>-&gt;timers-&gt;<span class="f">tick</span>(<span class="v">$this</span>-&gt;clock-&gt;<span class="f">now</span>());
 
-          <article class="card">
-            <span class="card-index">05</span>
-            <h4 class="mono">php-mini-cache</h4>
-            <p>An event-driven in-memory server speaking RESP: pipelining, TTL, Pub/Sub, <code>MULTI</code>/<code>EXEC</code> with <code>WATCH</code>, snapshots through a forked child, and measured event-loop fairness.</p>
-            <p class="question">How does one event loop serve many connections, and what happens when one client becomes too expensive?</p>
-            <ul class="tags"><li>PHP</li><li>TCP</li><li>RESP</li><li>non-blocking I/O</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-cache">GitHub</a></div>
-          </article>
+    <span class="c">// stream_select() narrows both arrays to whatever became ready.</span>
+    <span class="k">foreach</span> (<span class="v">$read</span> <span class="k">as</span> <span class="v">$stream</span>) {
+        <span class="v">$id</span> = <span class="f">get_resource_id</span>(<span class="v">$stream</span>);
 
-          <article class="card">
-            <span class="card-index">06</span>
-            <h4 class="mono">php-mini-http-server</h4>
-            <p>An event-driven HTTP server: request parsing, routing, middleware, response buffering and keep-alive.</p>
-            <p class="question">What happens when a client is slower than the server?</p>
-            <ul class="tags"><li>PHP</li><li>TCP</li><li>HTTP</li><li>event loop</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-http-server">GitHub</a></div>
-          </article>
+        <span class="c">// An earlier callback in this very loop may have closed this stream.</span>
+        <span class="k">if</span> (<span class="f">is_resource</span>(<span class="v">$stream</span>) &amp;&amp; <span class="f">isset</span>(<span class="v">$this</span>-&gt;readListeners[<span class="v">$id</span>])) {
+            (<span class="v">$this</span>-&gt;readListeners[<span class="v">$id</span>][<span class="n">1</span>])(<span class="v">$stream</span>);
+        }
+    }
 
-          <article class="card">
-            <span class="card-index">07</span>
-            <h4 class="mono">php-mini-database</h4>
-            <p>A small relational engine: pages and records, B-tree indexes, a SQL parser and executor, transactions, a write-ahead log and crash recovery.</p>
-            <p class="question">How can a database recover after a crash?</p>
-            <ul class="tags"><li>PHP</li><li>SQL</li><li>B-tree</li><li>WAL</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-database">GitHub</a></div>
-          </article>
+    <span class="c">// … the same for writable streams, then busy/idle time metrics.</span>
 
-          <article class="card">
-            <span class="card-index">08</span>
-            <h4 class="mono">php-mini-search</h4>
-            <p>A full-text search service: Unicode normalization, Snowball stemming, an inverted index, BM25 ranking, an append-only log and crash recovery.</p>
-            <p class="question">What does “more relevant” mean, as a number?</p>
-            <ul class="tags"><li>PHP</li><li>intl</li><li>BM25</li><li>inverted index</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-mini-search">GitHub</a></div>
-          </article>
-
-          <article class="card">
-            <span class="card-index">09</span>
-            <h4 class="mono">php-systems-platform</h4>
-            <p>The integration project: HTTP, cache, database, search, jobs and workers from the previous projects running together as one backend platform.</p>
-            <p class="question">How should failures and backpressure move between components?</p>
-            <ul class="tags"><li>PHP 8.5</li><li>multi-process</li><li>event-driven</li></ul>
-            <div class="card-links"><a href="https://github.com/Researcher86/php-systems-platform">GitHub</a></div>
-          </article>
-        </div>
+    <span class="k">return</span> <span class="v">$ready</span>;
+}</code></pre>
+        </figure>
       </div>
 
       <div class="subsection">
@@ -387,6 +506,7 @@
               </ul>
             </dd>
           </dl>
+          <p class="metric"><strong>10×</strong> faster test suite after enabling preloading and JIT</p>
           <ul class="tags"><li>Redis</li><li>RabbitMQ</li><li>OPcache</li><li>JIT</li><li>RoadRunner</li></ul>
         </article>
 
@@ -505,7 +625,8 @@
             <h3>Senior PHP Backend Engineer <span class="role-company">· <a href="https://systeme.io/">systeme.io</a></span></h3>
             <p>A high-load SaaS platform for running an online business; customers worldwide, mostly in Europe and the US.</p>
             <p>Backend work on the CRM (deal pipelines, access rules, filtering) and on account flows in a large Symfony monolith; carried out an incremental rollout of <code>strict_types</code> across the codebase.</p>
-            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
+            <p>Work daily with coding agents (Claude Code, Codex) and set up automated Codex review for pull requests in CI.</p>
+            <ul class="tags"><li>PHP</li><li>Symfony</li><li>Claude Code</li><li>Codex</li><li>Sentry</li><li>Grafana</li><li>Loki</li></ul>
           </div>
         </li>
         <li class="role">
@@ -593,7 +714,7 @@
     <div class="container">
       <p class="section-label">Writing</p>
       <h2 id="writing-title">Engineering Lab book</h2>
-      <p class="lead">Chapters written from the tagged code of each lab, in Russian. English notes are not published yet.</p>
+      <p class="lead">My study notes, written in Russian from the tagged code of each lab. English notes are not published yet.</p>
 
       <div class="grid grid-2">
         <article class="card">
