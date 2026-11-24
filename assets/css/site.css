@@ -778,3 +778,37 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
+
+/* Screenshot lightbox ----------------------------------------------------- */
+.lightbox {
+  max-width: min(64rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: visible;
+}
+.lightbox::backdrop { background: rgb(0 0 0 / 0.75); }
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 2rem);
+  border-radius: var(--radius);
+}
+.lightbox-close {
+  position: absolute;
+  top: -0.875rem;
+  right: -0.875rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.375rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+.work-shots a { cursor: zoom-in; }
