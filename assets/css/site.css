@@ -793,8 +793,8 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
 .lightbox img {
   display: block;
   max-width: 100%;
-  max-height: calc(100vh - 2rem);
-  border-radius: var(--radius);
+  max-height: calc(100vh - 5rem);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 .lightbox-close {
   position: absolute;
@@ -812,3 +812,49 @@ code, .mono { font-family: var(--font-mono); font-size: 0.875em; }
 }
 .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
 .work-shots a { cursor: zoom-in; }
+
+/* Screenshot carousel ----------------------------------------------------- */
+.work-shots.carousel {
+  display: flex;
+  max-width: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-2);
+}
+.work-shots.carousel a { flex: 0 0 auto; scroll-snap-align: start; }
+.work-shots.carousel img { width: auto; height: 10rem; }
+.carousel-controls { display: flex; gap: var(--space-2); margin-top: var(--space-2); }
+.carousel-btn,
+.lightbox-nav {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.375rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.carousel-btn:hover,
+.lightbox-nav:hover { border-color: var(--accent); color: var(--accent); }
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lightbox-prev { left: 0.5rem; }
+.lightbox-next { right: 0.5rem; }
+.lightbox-caption {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+/* Small dialog screenshots are upscaled so they stay readable. */
+.lightbox img { min-width: min(36rem, calc(100vw - 2rem)); }
+@media (min-width: 48rem) {
+  .lightbox-prev { left: -3rem; }
+  .lightbox-next { right: -3rem; }
+}
+/* A grid item defaults to min-width: auto; the carousel would stretch the card. */
+.work { min-width: 0; }
